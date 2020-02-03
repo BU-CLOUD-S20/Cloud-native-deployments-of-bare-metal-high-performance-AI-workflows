@@ -24,7 +24,7 @@ The vision statement should be specific enough that you can look at a proposed s
 
 ## 2. Users/Personas Of The Project:
 
-### `Project Alias` will serve as a bridge from existing bare-metal HPC clusters (example: Satori@MIT) to a native cloud environment for better resource utilization and price-efficiency. High-level goals of `Project Alias` includes:
+##### `Project Alias` will serve as a bridge from existing bare-metal HPC clusters (example: Satori@MIT) to a native cloud environment for better resource utilization and price-efficiency. High-level goals of `Project Alias` includes:
 
 - Provide services that help containerize existing bare-metal AI workflows and hook the images to an OpenShift cluster.
 - Provide an interface to monitor and compare OpenShift workflows and bare-metal workflows from multiple perspectives.

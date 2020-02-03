@@ -48,28 +48,39 @@ Global Architectural Structure Of the Project:
 
 This section provides a high-level architecture or a conceptual diagram showing the scope of the solution. If wireframes or visuals have already been done, this section could also be used to show how the intended solution will look. This section also provides a walkthrough explanation of the architectural structure.
 
- 
+**Design Implications and Discussion:**
 
-Design Implications and Discussion:
-
-This section discusses the implications and reasons of the design decisions made during the global architecture design.
+1. Scripts/Executables:
+...In order to compare two systems benefits, the Scripts/Executables will be needed to easily upload the codes to the bare-metal system and cloud-native (OpenShift) at the same time. And the scripts/executables will be one of the most important parts of the whole workflow since it not only sends the codes but also sends results from the bare-metal system to the OpenShift database to let task monitor service compare and then return the comparison results to the users.
+2. Automatic deploy experiments: 
+...Because tasks need to be deployed automatically, so there should have an interface or containers to automatically execute the experimental codes in two different environments.
+3. Database: 
+...Usually, the data set of tasks could be massive and it makes no sense for the local database store them. The database in the OpenShift only stores the results of tasks from both the cloud-native and bare-metal system. Tasks will retrieve data set from the data source outside, e.g. AWS.
+4. Task monitor service: 
+...Since the tasks need uncertain time to complete, and may fail at any time, task monitor service will be needed to keep track of the detailed status of tasks, to see if each step finishes or fails (data preprocessing, data training, data prediction and so on), then after all tasks finishing, it will gather all the results to form the final deliverables.
+5. Outside data:
+...import interface: Besides the data directly from users, systems will be able to retrieve the data from an external resource and able to do data screening. Because normally, the size of those data is very large, typically in gigabytes. 
 
 ## 5. Acceptance criteria
 
-This section discusses the minimum acceptance criteria at the end of the project and stretch goals.
+- Directing resources to under-utlized nodes (or minimally displaying that there are such instances) in an effortless manner.
+- Extending to a wider class of projects by circumventing the problem of workflows being tied to a current system.
+- Minimizing data inertia to allow for quick scaling up in the presence of high(er)-performance projects.
 
 ## 6.  Release Planning:
 
-`**Release 1** (week 5):` 
+The minimum acceptance criteria is an interface that is able to deploy and containerize a more general class of high-performance AI projects, many of which are currently existing in the MIT HPC. The system must also be able to generate comparison metrics (on a few dimensions such as elasticity, performance, economics, etc.) between the project being run in a native cloud environment (in our case; the ‘hybrid cloud’ system, OpenShift) and a bare metal environment. Some *stretch goals* we hope to implement are:
+
+`Release 1 (week 5):` 
 - Try to deploy at least one specific workflow to OpenShift
 - Be able to spawn a bare metal and cloud job for a particular workflow
 
-`**Release 2** (week 9):` 
+`Release 2 (week 9):` 
 - Write scripts that monitors both the bare-metal and cloud workflow and displays one dimension of performance in real-time
 - Write a script that allows us to deploy multiple workflow to OpenShift
 - Some preliminary form of an interface to communicate with our system 
 
-`**Release 3** (week 13):` 
+`Release 3 (week 13):` 
 - Design a platform that, in tandem, can start both the bare metal and cloud job using https/ssh protocol.
 - Interface to include detailed comparison between bare-metal env. & cloud-native implementations of parallel ML workflows.
 - Display under-utilized nodes in OpenShift and perhaps suggestions/actual effectuations of running backfill overloads.

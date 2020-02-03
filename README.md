@@ -57,7 +57,7 @@ This section provides a high-level architecture or a conceptual diagram showing 
 3. Database: 
 ...Usually, the data set of tasks could be massive and it makes no sense for the local database store them. The database in the OpenShift only stores the results of tasks from both the cloud-native and bare-metal system. Tasks will retrieve data set from the data source outside, e.g. AWS.
 4. Task monitor service: 
-...Since the tasks need uncertain time to complete, and may fail at any time, task monitor service will be needed to keep track of the detailed status of tasks, to see if each step finishes or fails (data preprocessing, data training, data prediction and so on), then after all tasks finishing, it will gather all the results to form the final deliverables.
+⋅⋅⋅Since the tasks need uncertain time to complete, and may fail at any time, task monitor service will be needed to keep track of the detailed status of tasks, to see if each step finishes or fails (data preprocessing, data training, data prediction and so on), then after all tasks finishing, it will gather all the results to form the final deliverables.
 5. Outside data:
 ...import interface: Besides the data directly from users, systems will be able to retrieve the data from an external resource and able to do data screening. Because normally, the size of those data is very large, typically in gigabytes. 
 

@@ -52,7 +52,7 @@ In order to compare two systems benefits, the Scripts/Executables will be needed
 Because tasks need to be deployed automatically, so there should have an interface or containers to automatically execute the experimental codes in two different environments.
 
 **3. Database:**
-...Usually, the data set of tasks could be massive and it makes no sense for the local database store them. The database in the .. ...OpenShift only stores the results of tasks from both the cloud-native and bare-metal system. Tasks will retrieve data set from the .. ...data source outside, e.g. AWS. ..
+Usually, the data set of tasks could be massive and it makes no sense for the local database store them. The database in the OpenShift only stores the results of tasks from both the cloud-native and bare-metal system. Tasks will retrieve data set from the data source outside, e.g. AWS.
 
 **4. Task monitor service:** 
 Since the tasks need uncertain time to complete, and may fail at any time, task monitor service will be needed to keep track of the detailed status of tasks, to see if each step finishes or fails (data preprocessing, data training, data prediction and so on), then after all tasks finishing, it will gather all the results to form the final deliverables.

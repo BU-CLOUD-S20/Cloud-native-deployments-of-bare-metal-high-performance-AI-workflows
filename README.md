@@ -34,23 +34,42 @@ The vision statement should be specific enough that you can look at a proposed s
 
 ## 3.   Scope and Features Of The Project:
 
+#### The functions and features of `Project Alias` are as follows:
+
 * Create any documentation and scripts that allow users to containerize existing High Performance (AI) workflows
+
 * Generate charting that compares performance metrics (potentially with regard to: elasticity, economics, performance, data access and scalability) between bare-metal and OpenShift environments.
+
 * Generate display (of suggestions) for ‘under-utilized’ nodes in OpenShift that could be used for running backfill workloads.
+
 * Use of a 'Hybrid Cloud’ environment that will allow data to be processed either at local workstations with some nodes from AWS/GSP, or at OpenShift’s own centers (a medley of on-site, private cloud and third-party).
+
 * Ability to operate with ease across multiple deployments (MIT HPC, MIT-IBM Watson lab, etc.).
+
 * A easy-to-operate interface with the following features/functions:
+
     * Simple management of the users of the system.
+    
     * Ability to add/deploy a wide-variety extant projects with ease.
+    
     * Manipulation (with relatively low latency) of low-level resources such as: computing, network, storage, node allocation.
+    
     * Simple to view instances and launch/suspend new or existing instances.
+    
     * View existing networks.
+    
 * Secure user authentication.
+
 * Ability to be scalable (a large number of users, services, projects, data) with workflows easily containerized in a timely fashion:
+
     * Streamlining scaling up through the following methods will also be explored:
+    
         * Minimizing data inertia.
+        
         * Circumventing workflow tied to a current system.
+        
 * Ability to deploy researcher workflows or code with ease from a bare metal environment to OpenShift/Kubernetes
+
 * Generalized: orientation is mostly towards high-performance AI workflows, but should have the capability to deploy a wide range of projects. 
 
 ## 4. Solution Concept

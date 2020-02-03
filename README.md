@@ -74,35 +74,42 @@ The vision statement should be specific enough that you can look at a proposed s
 * Generalized: orientation is mostly towards high-performance AI workflows, but should have the capability to deploy a wide range of projects. 
 
 ## 4. Solution Concept
-#### Global Architectural Structure Of the Project:
+### Global Architectural Structure Of the Project:
+Below is a description of the system components that are building blocks of the architectural design:
+- **Scripts/Executables:** Users can write the scripts/executables to upload their codes and metadata of their program.
+- **Tasks Services:** Tasks Services will run in containers; once a user finishes uploading code and metadata, the tasks monitor service will be triggered to generate a task service in a container.
+- **DB:** This database is used to store tasks results from both the bare-metal system and OpenShift. The records in this DB should be detailed, including `task_id`, `task_start_time`, `task_end_time`, `resources_used` and so on.
+- **Tasks monitor service:** This service should also run in a container, and monitor the execution status of a task, once a task finishes or fails, this service should report it. And it should also monitor all the key phases of a task, such as data preprocessing, data training, data prediction and so on, it can obtain the information from the metadata of this task which is uploaded with codes. After tasks finishing, this service should gather all the task results and organize them to form a comparison result between the cloud-native and bare-metal system.
+- **Data source:** The training data, validation data, test data and any other chunk data with relation to the task should be stored outside the system, they can be on AWS or individual machines
 
-#### Design Implications and Discussion:
+> `Figure 1` and `Figure 2` below show the overview architecture of this project and the rough sequence among each component.
 
-**1. Scripts/Executables:**
+![alt text](./imgs/../doc/imgs/overview_architecture.png "Overview Architecture")
+<center>Figure 1: Global Architectural Structure Of the Project</center>
+
+![alt text](./imgs/../doc/imgs/overview_sequence_diagram.png "Overview Sequence Diagram")
+<center>Figure 2: Sequence diagram of this project</center>
+
+### Design Implications and Discussion:
+This section discusses the implications and reasons for the design decisions made during the global architecture design.
+- **Scripts/Executables:**
 In order to compare two systems benefits, the Scripts/Executables will be needed to easily upload the codes to the bare-metal system and cloud-native (OpenShift) at the same time. And the scripts/executables will be one of the most important parts of the whole workflow since it not only sends the codes but also sends results from the bare-metal system to the OpenShift database to let task monitor service compare and then return the comparison results to the users.
-
-**2. Automatic deploy experiments:** 
+- **Automatic deploy experiments:** 
 Because tasks need to be deployed automatically, so there should have an interface or containers to automatically execute the experimental codes in two different environments.
-
-**3. Database:**
+- **Database:**
 Usually, the data set of tasks could be massive and it makes no sense for the local database store them. The database in the OpenShift only stores the results of tasks from both the cloud-native and bare-metal system. Tasks will retrieve data set from the data source outside, e.g. AWS.
-
-**4. Task monitor service:** 
+- **Task monitor service:** 
 Since the tasks need uncertain time to complete, and may fail at any time, task monitor service will be needed to keep track of the detailed status of tasks, to see if each step finishes or fails (data preprocessing, data training, data prediction and so on), then after all tasks finishing, it will gather all the results to form the final deliverables.
-
-**5. Outside data import interface:**
+- **Outside data import interface:**
 Besides the data directly from users, systems will be able to retrieve the data from an external resource and able to do data screening. Because normally, the size of those data is very large, typically in gigabytes. 
 
 ## 5. Acceptance criteria
-
+The minimum acceptance criteria is an interface that is able to deploy and containerize a more general class of high-performance AI projects, many of which are currently existing in the MIT HPC. The system must also be able to generate comparison metrics (on a few dimensions such as elasticity, performance, economics, etc.) between the project being run in a native cloud environment (in our case; the ‘hybrid cloud’ system, OpenShift) and a bare metal environment. Some stretch goals we hope to implement are:
 - Directing resources to under-utlized nodes (or minimally displaying that there are such instances) in an effortless manner.
 - Extending to a wider class of projects by circumventing the problem of workflows being tied to a current system.
 - Minimizing data inertia to allow for quick scaling up in the presence of high(er)-performance projects.
 
 ## 6.  Release Planning:
-
-The minimum acceptance criteria is an interface that is able to deploy and containerize a more general class of high-performance AI projects, many of which are currently existing in the MIT HPC. The system must also be able to generate comparison metrics (on a few dimensions such as elasticity, performance, economics, etc.) between the project being run in a native cloud environment (in our case; the ‘hybrid cloud’ system, OpenShift) and a bare metal environment. Some *stretch goals* we hope to implement are:
-
 `Release 1 (Week 5):` 
 - Try to deploy at least one specific workflow to OpenShift
 - Be able to spawn a bare metal and cloud job for a particular workflow

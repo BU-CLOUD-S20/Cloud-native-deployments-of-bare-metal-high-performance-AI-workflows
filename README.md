@@ -49,16 +49,16 @@ It should be specific enough that you can determine that e.g. feature A is in-sc
 In order to compare two systems benefits, the Scripts/Executables will be needed to easily upload the codes to the bare-metal system and cloud-native (OpenShift) at the same time. And the scripts/executables will be one of the most important parts of the whole workflow since it not only sends the codes but also sends results from the bare-metal system to the OpenShift database to let task monitor service compare and then return the comparison results to the users.
 
 **2. Automatic deploy experiments:** 
-...Because tasks need to be deployed automatically, so there should have an interface or containers to automatically execute the experimental codes in two different environments.
+Because tasks need to be deployed automatically, so there should have an interface or containers to automatically execute the experimental codes in two different environments.
 
 **3. Database:**
-Usually, the data set of tasks could be massive and it makes no sense for the local database store them. The database in the OpenShift only stores the results of tasks from both the cloud-native and bare-metal system. Tasks will retrieve data set from the data source outside, e.g. AWS.
+...Usually, the data set of tasks could be massive and it makes no sense for the local database store them. The database in the .. ...OpenShift only stores the results of tasks from both the cloud-native and bare-metal system. Tasks will retrieve data set from the .. ...data source outside, e.g. AWS. ..
 
 **4. Task monitor service:** 
 Since the tasks need uncertain time to complete, and may fail at any time, task monitor service will be needed to keep track of the detailed status of tasks, to see if each step finishes or fails (data preprocessing, data training, data prediction and so on), then after all tasks finishing, it will gather all the results to form the final deliverables.
 
-**5. Outside data:**
-import interface: Besides the data directly from users, systems will be able to retrieve the data from an external resource and able to do data screening. Because normally, the size of those data is very large, typically in gigabytes. 
+**5. Outside data import interface:**
+Besides the data directly from users, systems will be able to retrieve the data from an external resource and able to do data screening. Because normally, the size of those data is very large, typically in gigabytes. 
 
 ## 5. Acceptance criteria
 

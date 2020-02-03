@@ -60,16 +60,16 @@ This section discusses the minimum acceptance criteria at the end of the project
 
 ## 6.  Release Planning:
 
-`Release 1 (week 5):` 
+`**Release 1** (week 5):` 
 - Try to deploy at least one specific workflow to OpenShift
 - Be able to spawn a bare metal and cloud job for a particular workflow
 
-`Release 2 (week 9):` 
+`**Release 2** (week 9):` 
 - Write scripts that monitors both the bare-metal and cloud workflow and displays one dimension of performance in real-time
 - Write a script that allows us to deploy multiple workflow to OpenShift
 - Some preliminary form of an interface to communicate with our system 
 
-`Release 3 (week 13):` 
+`**Release 3** (week 13):` 
 - Design a platform that, in tandem, can start both the bare metal and cloud job using https/ssh protocol.
 - Interface to include detailed comparison between bare-metal env. & cloud-native implementations of parallel ML workflows.
 - Display under-utilized nodes in OpenShift and perhaps suggestions/actual effectuations of running backfill overloads.

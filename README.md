@@ -34,11 +34,24 @@ The vision statement should be specific enough that you can look at a proposed s
 
 ## 3.   Scope and Features Of The Project:
 
-The Scope places a boundary around the solution by detailing the range of features and functions of the project. This section helps to clarify the solution scope and can explicitly state what will not be delivered as well.
-
-It should be specific enough that you can determine that e.g. feature A is in-scope, while feature B is out-of-scope.
-
-** **
+* Create any documentation and scripts that allow users to containerize existing High Performance (AI) workflows
+* Generate charting that compares performance metrics (potentially with regard to: elasticity, economics, performance, data access and scalability) between bare-metal and OpenShift environments.
+* Generate display (of suggestions) for ‘under-utilized’ nodes in OpenShift that could be used for running backfill workloads.
+* Use of a 'Hybrid Cloud’ environment that will allow data to be processed either at local workstations with some nodes from AWS/GSP, or at OpenShift’s own centers (a medley of on-site, private cloud and third-party).
+* Ability to operate with ease across multiple deployments (MIT HPC, MIT-IBM Watson lab, etc.).
+* A easy-to-operate interface with the following features/functions:
+    * Simple management of the users of the system.
+    * Ability to add/deploy a wide-variety extant projects with ease.
+    * Manipulation (with relatively low latency) of low-level resources such as: computing, network, storage, node allocation.
+    * Simple to view instances and launch/suspend new or existing instances.
+    * View existing networks.
+* Secure user authentication.
+* Ability to be scalable (a large number of users, services, projects, data) with workflows easily containerized in a timely fashion:
+    * Streamlining scaling up through the following methods will also be explored:
+        * Minimizing data inertia.
+        * Circumventing workflow tied to a current system.
+* Ability to deploy researcher workflows or code with ease from a bare metal environment to OpenShift/Kubernetes
+* Generalized: orientation is mostly towards high-performance AI workflows, but should have the capability to deploy a wide range of projects. 
 
 ## 4. Solution Concept
 #### Global Architectural Structure Of the Project:
@@ -70,16 +83,16 @@ Besides the data directly from users, systems will be able to retrieve the data 
 
 The minimum acceptance criteria is an interface that is able to deploy and containerize a more general class of high-performance AI projects, many of which are currently existing in the MIT HPC. The system must also be able to generate comparison metrics (on a few dimensions such as elasticity, performance, economics, etc.) between the project being run in a native cloud environment (in our case; the ‘hybrid cloud’ system, OpenShift) and a bare metal environment. Some *stretch goals* we hope to implement are:
 
-`Release 1 (week 5):` 
+`Release 1 (Week 5):` 
 - Try to deploy at least one specific workflow to OpenShift
 - Be able to spawn a bare metal and cloud job for a particular workflow
 
-`Release 2 (week 9):` 
+`Release 2 (Week 9):` 
 - Write scripts that monitors both the bare-metal and cloud workflow and displays one dimension of performance in real-time
 - Write a script that allows us to deploy multiple workflow to OpenShift
 - Some preliminary form of an interface to communicate with our system 
 
-`Release 3 (week 13):` 
+`Release 3 (Week 13):` 
 - Design a platform that, in tandem, can start both the bare metal and cloud job using https/ssh protocol.
 - Interface to include detailed comparison between bare-metal env. & cloud-native implementations of parallel ML workflows.
 - Display under-utilized nodes in OpenShift and perhaps suggestions/actual effectuations of running backfill overloads.

@@ -1,11 +1,11 @@
 ** **
 
-## `Project Alias` 
+## Atlas 
 ## Cloud Native Deployments of Bare-Metal High-Performance AI Workflows Proposal
 
 ## 1.   Vision and Goals Of The Project:
 
-`Project Alias` will serve as a bridge from existing bare-metal HPC clusters (example: Satori@MIT) to a native cloud environment for better resource utilization and price-efficiency. High-level goals of `Project Alias` includes:
+Atlas will serve as a bridge from existing bare-metal HPC clusters (example: Satori@MIT) to a native cloud environment for better resource utilization and price-efficiency. High-level goals of Atlas includes:
 - Survey existing MIT bare-metal workloads and containerize one of them.
 - Monitor and compare OpenShift workflows and bare-metal workflows.
 - Generate a report that portrays the pros/cons of migrating bare-metal workflow to OpenShift environment.

@@ -1,6 +1,6 @@
 ** **
 
-## Atlas 
+# Atlas 
 ## Cloud Native Deployments of Bare-Metal High-Performance AI Workflows Proposal
 
 ## 1.   Vision and Goals Of The Project:
@@ -43,10 +43,10 @@ Below is a description of the system components that are building blocks of the 
 > `Figure 1` and `Figure 2` below show the overview architecture of this project and the rough sequence among each component.
 
 ![alt text](./imgs/../doc/imgs/overview-architecture.png "Overview Architecture")
-<center>Figure 1: Global Architectural Structure Of the Project</center>
+<center>`Figure 1:` Global Architectural Structure Of the Project</center>
 
 ![alt text](./imgs/../doc/imgs/overview-sequence-diagram.png "Overview Sequence Diagram")
-<center>Figure 2: Sequence diagram of this project</center>
+<center>`Figure 2:` Sequence diagram of this project</center>
 
 ### Design Implications and Discussion:
 This section discusses the implications and reasons for the design decisions made during the global architecture design.

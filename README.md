@@ -43,10 +43,10 @@ Below is a description of the system components that are building blocks of the 
 > `Figure 1` and `Figure 2` below show the overview architecture of this project and the rough sequence among each component.
 
 ![alt text](./imgs/../doc/imgs/overview-architecture.png "Overview Architecture")
-<center>Figure 1: Global Architectural Structure Of the Project</center>
+<p align="center">Figure 1: Global Architectural Structure Of the Project</p>
 
 ![alt text](./imgs/../doc/imgs/overview-sequence-diagram.png "Overview Sequence Diagram")
-<center>Figure 2: Sequence diagram of this project</center>
+<p align="center">Figure 2: Sequence diagram of this project</p>
 
 ### Design Implications and Discussion:
 This section discusses the implications and reasons for the design decisions made during the global architecture design.

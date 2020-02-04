@@ -1,6 +1,6 @@
 
 <h1 align="center"> Atlas </h1> 
-** ** 
+
 ## Cloud Native Deployments of Bare-Metal High-Performance AI Workflows Proposal
 
 ## 1.   Vision and Goals Of The Project:

@@ -1,7 +1,7 @@
 
 <h1 align="center"> Project Atlas </h1> 
 
-## Cloud Native Deployments of Bare-Metal High-Performance AI Workflows Proposal
+<h2 align="center"> Cloud Native Deployments of Bare-Metal High-Performance AI Workflows Proposal </h2> 
 
 ## 1.   Vision and Goals Of The Project:
 

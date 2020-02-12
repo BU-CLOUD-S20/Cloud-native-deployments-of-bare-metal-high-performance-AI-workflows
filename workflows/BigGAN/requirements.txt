@@ -1,5 +1,6 @@
-torch
 numpy
 torchvision
 tqdm
 h5py
+torch
+scipy

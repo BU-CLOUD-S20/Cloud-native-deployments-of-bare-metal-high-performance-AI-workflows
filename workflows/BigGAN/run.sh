@@ -2,8 +2,7 @@
 
 HOME=`pwd`
 WORK_DIR=${HOME}/work/
-DATA_ROOT="/Users/Shawn/Documents/BU/courses/2020_spring/CComp/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/data/"
-PYTHON="python3"
+DATA_ROOT="/data/"
 
 # TODO: maybe move this to a configuration file?
 DATASET=ImageNet
@@ -22,20 +21,15 @@ git clone https://github.com/shawn3298317/BigGAN-PyTorch.git
 cd ${WORK_DIR}/BigGAN-PyTorch/
 git checkout -b satori --track origin/satori
 
-# TODO: create py_env virtual env with in container?
-echo "Installing python package dependencies..."
-cd ${WORK_DIR}
-pip3 install -r requirements.txt
-
 echo "Making hdf5..."
-${PYTHON} ${WORK_DIR}/BigGAN-PyTorch/make_hdf5.py \
+python3 ${WORK_DIR}/BigGAN-PyTorch/make_hdf5.py \
     --dataset ${DATASET} \
     --resolution ${RESOLUTION} \
     --data_root ${DATA_ROOT}
 echo "HDF5 done!"
 
 echo "Calculating inception moments..."
-${PYTHON} ${WORK_DIR}/BigGAN-PyTorch/calculate_inception_moments.py \
+python3 ${WORK_DIR}/BigGAN-PyTorch/calculate_inception_moments.py \
     --dataset ${DATASET} \
     --resolution ${RESOLUTION} \
     --data_root ${DATA_ROOT} \
@@ -46,7 +40,7 @@ echo "Inception moments done!"
 echo "Start training bigGAN..."
 # TODO: Investigate if we need mpirun for container env?
 # mpirun -np ${N} \
-${PYTHON} ${WORK_DIR}/BigGAN-PyTorch/main.py \
+python3 ${WORK_DIR}/BigGAN-PyTorch/main.py \
     --model biggan_deep \
     --dataset ${DATASET} --resolution ${RESOLUTION} --shuffle  --num_workers 8 --batch_size 2 \
     --dataset_type ${DATASET_TYPE} \

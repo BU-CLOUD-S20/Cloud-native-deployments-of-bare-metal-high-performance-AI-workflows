@@ -77,6 +77,8 @@ The minimum acceptance criteria is an interface that is able to containerize and
 - Interface to include detailed comparison between bare-metal env. & cloud-native implementations of parallel ML workflows.
 - Display under-utilized nodes in OpenShift and perhaps suggestions/actual effectuations of running backfill overloads.
 
+## Demo 1 Presentation
+- Please find current updates on our project (via a presentation format) located [!here(https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/Demo%201%20Presentation.pdf)]
 
 ## Optional Features
 - Automatic deploy experiments: Because tasks need to be deployed automatically, so there should have an interface or containers to automatically execute the experimental codes in two different environments.

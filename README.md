@@ -5,7 +5,7 @@
 
 ## Index
 1. [Vision and Goals Of The Project](#1-vision-and-goals-of-the-project)
-7. [FAQ](!https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/logistic/faq-page/faq.md)
+7. [FAQ](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/logistic/faq-page/faq.md)
 
 ## 1. Vision and Goals Of The Project
 

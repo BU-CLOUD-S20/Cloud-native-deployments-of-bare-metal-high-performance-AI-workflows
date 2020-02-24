@@ -4,10 +4,10 @@
 <h2 align="center"> Cloud Native Deployments of Bare-Metal High-Performance AI Workflows Proposal </h2> 
 
 ## Index
-1. [Vision and Goals Of The Project](#Vision-and-Goals-Of-The-Project)
-7. [FAQ](!)
+1. [Vision and Goals Of The Project](#1-vision-and-goals-of-the-project)
+7. [FAQ](!https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/logistic/faq-page/faq.md)
 
-## 1. Vision and Goals Of The Project:
+## 1. Vision and Goals Of The Project
 
 Atlas will serve as a bridge from existing bare-metal HPC clusters (example: Satori@MIT) to a native cloud environment for better resource utilization and price-efficiency. High-level goals of Atlas includes:
 - Survey existing MIT bare-metal workloads and containerize one of them.

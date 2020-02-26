@@ -35,14 +35,13 @@ Atlas will serve as a bridge from existing bare-metal HPC clusters (example: Sat
 ## 4. Solution Concept
 ### Global Architectural Structure Of the Project:
 Below is a description of the system components that are building blocks of the architectural design:
-- **Scripts/Executables:** Users can write the scripts/executables to upload their codes and metadata of their program.
-- **Tasks Services:** Tasks Services will run in containers; once a user finishes uploading code and metadata, the tasks monitor service will be triggered to generate a task service in a container.
-- **Tasks monitor service:** This service should also run in a container, and monitor the execution status of a task, once a task finishes or fails, this service should report it. And it should also monitor all the key phases of a task, such as data preprocessing, data training, data prediction and so on, it can obtain the information from the metadata of this task which is uploaded with codes. After tasks finishing, this service should gather all the task results and organize them to form a comparison result between the cloud-native and bare-metal system.
-- **Data source:** The training data, validation data, test data and any other chunk data with relation to the task should be stored outside the system, they can be on AWS or individual machines.
+- **Scripts/Executables:** Users can write the scripts/executables to specify the commands for OpenShift and Satori.
+- **Containers:** The containers include the codes of AI program. And deployed by OpenShift
+- **Volumes:** Used for save training/test/validation data of AI program as well as results of the program.
 
 > `Figure 1` and `Figure 2` below show the overview architecture of this project and the rough sequence among each component.
 
-![alt text](./imgs/../doc/imgs/overview-architecture.png "Overview Architecture")
+![alt text](https://www.lucidchart.com/publicSegments/view/4f14108f-deb4-4e67-836f-cd1049b2fe00/image.png "Overview Architecture")
 <p align="center">Figure 1: Global Architectural Structure Of the Project</p>
 
 ![alt text](./imgs/../doc/imgs/overview-sequence-diagram.png "Overview Sequence Diagram")
@@ -51,11 +50,9 @@ Below is a description of the system components that are building blocks of the 
 ### Design Implications and Discussion:
 This section discusses the implications and reasons for the design decisions made during the global architecture design.
 - **Scripts/Executables:**
-In order to compare two systems benefits, the Scripts/Executables will be needed to easily upload the codes to the bare-metal system and cloud-native (OpenShift) at the same time. And the scripts/executables will be one of the most important parts of the whole workflow since it not only sends the codes but also sends results from the bare-metal system to the OpenShift database to let task monitor service compare and then return the comparison results to the users.
-- **Task monitor service:** 
-Since the tasks need uncertain time to complete, and may fail at any time, task monitor service will be needed to keep track of the detailed status of tasks, to see if each step finishes or fails (data preprocessing, data training, data prediction and so on), then after all tasks finishing, it will gather all the results to form the final deliverables.
-- **Outside data import interface:**
-Besides the data directly from users, systems will be able to retrieve the data from an external resource and able to do data screening. Because normally, the size of those data is very large, typically in gigabytes. 
+In order to compare two systems benefits, the Scripts/Executables will be needed to easily upload the codes to the bare-metal system and cloud-native (OpenShift) at the same time. And the scripts/executables will be one of the most important parts of the whole workflow since it will tell how OpenShift and Satori do to make the AI workflow work, and get the returned comparison results to the users.
+- **Containers:** On OpenShift, we should use **BuildConfig** to automatically build images for AI workflows and deploy them as containers. Each container can only serve for one application.
+- **Volumes:** For persistent storage, save data on containers or retrieve from internet are not a wise choice, so we decide to use volume on OpenShift to store our data.
 
 ## 5. Acceptance criteria
 The minimum acceptance criteria is an interface that is able to containerize and deploy a specific AI workflow, many of which are currently existing in the MIT HPC. The system must also be able to generate comparison metrics (on a few dimensions such as elasticity, performance, economics, etc.) between the project being run in a native cloud environment (in our case; the ‘hybrid cloud’ system, OpenShift) and a bare metal environment. Some stretch goals we hope to implement are:

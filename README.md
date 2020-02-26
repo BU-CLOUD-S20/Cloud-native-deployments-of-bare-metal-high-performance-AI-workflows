@@ -39,13 +39,13 @@ Below is a description of the system components that are building blocks of the 
 - **Containers:** The containers include the codes of AI program. And deployed by OpenShift
 - **Volumes:** Used for save training/test/validation data of AI program as well as results of the program.
 
-> `Figure 1` and `Figure 2` below show the overview architecture of this project and the rough sequence among each component.
+> `Figure 1` below shows the overview architecture of this project.
 
 ![alt text](https://www.lucidchart.com/publicSegments/view/4f14108f-deb4-4e67-836f-cd1049b2fe00/image.png "Overview Architecture")
 <p align="center">Figure 1: Global Architectural Structure Of the Project</p>
 
-![alt text](./imgs/../doc/imgs/overview-sequence-diagram.png "Overview Sequence Diagram")
-<p align="center">Figure 2: Sequence diagram of this project</p>
+<!-- ![alt text](./imgs/../doc/imgs/overview-sequence-diagram.png "Overview Sequence Diagram")
+<p align="center">Figure 2: Sequence diagram of this project</p> -->
 
 ### Design Implications and Discussion:
 This section discusses the implications and reasons for the design decisions made during the global architecture design.

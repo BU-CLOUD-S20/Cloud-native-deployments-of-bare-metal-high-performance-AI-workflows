@@ -52,7 +52,7 @@ This section discusses the implications and reasons for the design decisions mad
 - **Scripts/Executables:**
 In order to compare two systems benefits, the Scripts/Executables will be needed to easily upload the codes to the bare-metal system and cloud-native (OpenShift) at the same time. And the scripts/executables will be one of the most important parts of the whole workflow since it will tell how OpenShift and Satori do to make the AI workflow work, and get the returned comparison results to the users.
 - **Containers:** On OpenShift, we should use **BuildConfig** to automatically build images for AI workflows and deploy them as containers. Each container can only serve for one application.
-- **Volumes:** For persistent storage, save data on containers or retrieve from internet are not a wise choice, so we decide to use volume on OpenShift to store our data.
+- **Volumes:** For persistent storage, save data in containers or downloading data from internet every single time is not a wise choice, so we decide to use volume on OpenShift to store our data.
 
 ## 5. Acceptance criteria
 The minimum acceptance criteria is an interface that is able to containerize and deploy a specific AI workflow, many of which are currently existing in the MIT HPC. The system must also be able to generate comparison metrics (on a few dimensions such as elasticity, performance, economics, etc.) between the project being run in a native cloud environment (in our case; the ‘hybrid cloud’ system, OpenShift) and a bare metal environment. Some stretch goals we hope to implement are:

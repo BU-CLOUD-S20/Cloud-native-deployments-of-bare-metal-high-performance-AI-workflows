@@ -12,6 +12,8 @@ TRAIN_FILE=${WORK_DIR}/trainfile_biggan_deep128_imagenet
 N=1 # TODO: figure out what is the purpose of setting world size
 
 mkdir ${WORK_DIR} && cd ${WORK_DIR}
+git config --global user.name "Shawn Lin"
+git config --global user.email "shawn3298317lin@gmail.com"
 git clone https://github.com/shawn3298317/BigGAN-PyTorch.git
 cd ${WORK_DIR}/BigGAN-PyTorch/
 git checkout -b satori --track origin/satori

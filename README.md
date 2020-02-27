@@ -3,7 +3,11 @@
 
 <h2 align="center"> Cloud Native Deployments of Bare-Metal High-Performance AI Workflows Proposal </h2> 
 
-## 1.   Vision and Goals Of The Project:
+## 0. Project Team:
+**Team members**: Hao Zuo,  Jing Qin, George Sorescu,  Shawn Lin,  Shubham Arora
+**Mentors**: Chris Hill, Mike Dame, Ravi Gudimetla
+
+## 1. Vision and Goals Of The Project:
 
 Atlas will serve as a bridge from existing bare-metal HPC clusters (example: Satori@MIT) to a native cloud environment for better resource utilization and price-efficiency. High-level goals of Atlas includes:
 - Survey existing MIT bare-metal workloads and containerize one of them.
@@ -17,7 +21,6 @@ Atlas will serve as a bridge from existing bare-metal HPC clusters (example: Sat
 - AI researchers looking to deploy **high-performance** AI workflows that are currently in a bare-metal environment, to a cloud native environment. 
 - Machine learning/AI engineers looking to deploy an extant, ‘power/processing-hungry’ system to a cloud environment.
 - Users seeking more privacy around their data that is transmitted to the cloud (provided by OpenShift).
-- Users looking to utilize tools such as [Singularity](https://www.sylabs.io/docs/), or other virtualization systems to containerize workflows in the HPC (high-performance computing) clusters.
 - A quintessential example of a user could be the MIT-IBM Watson AI laboratory looking to scale their workflows into the cloud in a discrete fashion. 
 - Average users/hobbyists looking to deploy non-intensive computational processes to the cloud.
 
@@ -26,7 +29,7 @@ Atlas will serve as a bridge from existing bare-metal HPC clusters (example: Sat
 
 - Users with complex requirements who might require additional interface/systemic modification.
 
-## 3.   Scope and Features Of The Project:
+## 3. Scope and Features Of The Project:
 - Create any documentation and scripts that allow users to containerize existing High Performance (AI) workflows
 - Generate charting that compares performance metrics (potentially with regard to: elasticity, economics, performance, data access and scalability) between bare-metal and OpenShift environments.
 - Generate display (of suggestions) for ‘under-utilized’ nodes in OpenShift that could be used for running backfill workloads.
@@ -60,8 +63,9 @@ The minimum acceptance criteria is an interface that is able to containerize and
 - Extending to a wider class of projects by circumventing the problem of workflows being tied to a current system.
 
 
-## 6.  Release Planning:
+## 6. Release Planning:
 `Release 1 (Week 5):` 
+
 - Try to deploy at least one specific workflow to OpenShift
 - Be able to spawn a bare metal and cloud job for a particular workflow
 
@@ -75,7 +79,10 @@ The minimum acceptance criteria is an interface that is able to containerize and
 - Display under-utilized nodes in OpenShift and perhaps suggestions/actual effectuations of running backfill overloads.
 
 ## Demo 1 Presentation
-- Please find current updates on our project (via a presentation format) located [here!](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/Demo%201%20Presentation.pdf)
+- Please find our first demo slides on our project (via a presentation format) located [here!](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/Demo%201%20Presentation.pdf)
+
+## Demo 2 Presentation
+- Please find our second demo slides on our project (via a presentation format) located [here!](https://docs.google.com/presentation/d/e/2PACX-1vTFE0KmPbPucVLAllZ5_O_YzWYu5XoTsPymi3VPrA8azxyJ-cIkMe5rxazSpy9s4ip8p-M0NfvrWtd1/pub?start=false&loop=false&delayms=3000)
 
 ## Optional Features
 - Automatic deploy experiments: Because tasks need to be deployed automatically, so there should have an interface or containers to automatically execute the experimental codes in two different environments.

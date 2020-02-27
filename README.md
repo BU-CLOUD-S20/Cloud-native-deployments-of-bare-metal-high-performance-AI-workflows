@@ -5,6 +5,7 @@
 
 ## 0. Project Team:
 **Team members**: Hao Zuo,  Jing Qin, George Sorescu,  Shawn Lin,  Shubham Arora
+
 **Mentors**: Chris Hill, Mike Dame, Ravi Gudimetla
 
 ## 1. Vision and Goals Of The Project:

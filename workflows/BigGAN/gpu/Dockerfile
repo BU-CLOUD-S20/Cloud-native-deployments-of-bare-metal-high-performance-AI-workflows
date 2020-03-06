@@ -9,4 +9,5 @@ WORKDIR /home/pwrai/atlas
 #ENTRYPOINT ["/bin/bash", "./workflows/BigGAN/gpu/entrypoint.sh"]
 #USER 2051
 
-ENTRYPOINT ["/bin/bash", "echo $(whoami) && ./workflows/BigGAN/gpu/run.sh"]
+#ENTRYPOINT ["/bin/bash", "./workflows/BigGAN/gpu/run.sh"]
+ENTRYPOINT ["echo", "$(whoami)"]

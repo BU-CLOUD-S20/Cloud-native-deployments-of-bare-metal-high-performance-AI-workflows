@@ -16,3 +16,4 @@ conda activate $PYTHON_VIRTUAL_ENVIRONMENT
 
 python3 test_env.py
 
+sleep 1d

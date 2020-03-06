@@ -11,4 +11,4 @@ WORKDIR /home/pwrai/atlas
 
 #ENTRYPOINT ["/bin/bash", "./workflows/BigGAN/gpu/run.sh"]
 #ENTRYPOINT ["echo", "$(whoami)"]
-CMD ["echo $(whoami)"]
+CMD ["whoami"]

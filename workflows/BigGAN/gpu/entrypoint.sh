@@ -6,6 +6,8 @@ if ! whoami &> /dev/null; then
   fi
 fi
 
+whoami
+
 HOME=/home/pwrai
 su pwrai
 

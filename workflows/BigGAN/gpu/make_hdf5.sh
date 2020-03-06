@@ -1,5 +1,5 @@
 #!/bin/bash
-HOME=/home/$(whoami)
+HOME=/home/pwrai
 WORK_DIR=$HOME
 PYTHON_VIRTUAL_ENVIRONMENT=wmlce
 CONDA_ROOT=${HOME}/anaconda

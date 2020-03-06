@@ -1,5 +1,4 @@
-HOME=/home/atlas
-CONDA_ROOT=/home/pwrai/anaconda
+HOME=/home/pwrai
 
-bash $CONDA_ROOT/bin/conda init
+su pwrai
 bash $HOME/workflows/BigGAN/run.sh

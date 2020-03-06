@@ -1,5 +1,5 @@
 #!/bin/bash
-HOME=/home/atlas
+HOME=/home/pwrai
 WORK_DIR=$HOME
 PYTHON_VIRTUAL_ENVIRONMENT=wmlce
 CONDA_ROOT=/home/pwrai/anaconda

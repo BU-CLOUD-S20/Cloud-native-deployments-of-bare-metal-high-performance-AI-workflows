@@ -1,8 +1,8 @@
 #!/bin/bash
-HOME=/home/pwrai
-WORK_DIR=./
+HOME=/home/atlas
+WORK_DIR=$HOME
 PYTHON_VIRTUAL_ENVIRONMENT=wmlce
-CONDA_ROOT=${HOME}/anaconda
+CONDA_ROOT=/home/pwrai/anaconda
 REPO=BigGAN-PyTorch
 DATA_ROOT="${WORK_DIR}/${REPO}/data" # Need to mount data to this path when starting image
 

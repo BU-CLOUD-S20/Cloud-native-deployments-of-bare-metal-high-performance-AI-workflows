@@ -14,5 +14,9 @@ DATASET_TYPE=ImageFolder
 source ${CONDA_ROOT}/etc/profile.d/conda.sh
 conda activate $PYTHON_VIRTUAL_ENVIRONMENT
 
+nvidia-smi
+
+cat /proc/driver/nvidia/gpus/0/information
+
 python3 $HOME/atlas/workflows/BigGAN/gpu/test_env.py
 

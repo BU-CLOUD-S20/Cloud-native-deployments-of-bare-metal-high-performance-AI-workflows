@@ -6,11 +6,5 @@ if ! whoami &> /dev/null; then
   fi
 fi
 
-id
-
 HOME=/home/pwrai
-su pwrai
-
-echo 1 > bash accept-powerai-license.sh
-
 bash $HOME/atlas/workflows/BigGAN/gpu/run.sh

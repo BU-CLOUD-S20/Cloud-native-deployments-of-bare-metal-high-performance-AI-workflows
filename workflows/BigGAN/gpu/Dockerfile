@@ -4,7 +4,8 @@ FROM atlas4openshift/powerai
 RUN git clone -b feature-gpubiggan https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows.git /home/pwrai/atlas && \
     chgrp -R 0 /home/pwrai && \
     chmod -R g=u /home/pwrai && \
-    chmod g=u /etc/passwd
+    chmod g=u /etc/passwd && \
+    chmod -R o+r /proc/driver
 
 WORKDIR /home/pwrai/atlas
 

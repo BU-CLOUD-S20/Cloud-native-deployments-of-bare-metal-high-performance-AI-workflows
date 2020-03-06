@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
 HOME=/home/pwrai
 WORK_DIR=./
 PYTHON_VIRTUAL_ENVIRONMENT=wmlce

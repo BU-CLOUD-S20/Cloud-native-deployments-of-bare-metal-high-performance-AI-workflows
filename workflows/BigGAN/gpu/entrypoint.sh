@@ -7,4 +7,5 @@ if ! whoami &> /dev/null; then
 fi
 
 HOME=/home/pwrai
-bash $HOME/atlas/workflows/BigGAN/gpu/run.sh
+#bash $HOME/atlas/workflows/BigGAN/gpu/run.sh
+bash $HOME/atlas/workflows/BigGAN/gpu/test_env.sh

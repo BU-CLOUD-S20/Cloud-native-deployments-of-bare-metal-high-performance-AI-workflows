@@ -14,6 +14,6 @@ DATASET_TYPE=ImageFolder
 source ${CONDA_ROOT}/etc/profile.d/conda.sh
 conda activate $PYTHON_VIRTUAL_ENVIRONMENT
 
-python3 test_env.py
+python3 $HOME/atlas/workflows/BigGAN/gpu/test_env.py
 
 sleep 1d

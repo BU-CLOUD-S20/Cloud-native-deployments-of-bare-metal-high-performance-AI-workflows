@@ -15,7 +15,7 @@ conda activate $PYTHON_VIRTUAL_ENVIRONMENT
 DATASET=ImageNet
 RESOLUTION=128
 DATASET_TYPE=ImageFolder
-N=8 # TODO: figure out what is the purpose of setting world size.
+N=1 # TODO: figure out what is the purpose of setting world size.
 
 # I think world size is a value that indicates how many available machines in the cluster
 # After running mpirun ${N}, it will set an environment variable named OMPI_COMM_WORLD_RANK, then in main.py, the program will get this variable and save it for distributed training.
@@ -23,6 +23,9 @@ N=8 # TODO: figure out what is the purpose of setting world size.
 # Briefly, RANK determines how many processes will run this program, if OMPI_COMM_WORLD_RANK is 10, then the processes' ranks are in the range of [0, 10), all integers.
 # Noticed that, the number of workers may not need to be the same as world size, since worker is only a logical thread on a machine, a machine can run many workers.
 # In our case, we may not need this program run in distributed mode, single machine, single worker is enough.
+
+TRAINFILE=$WORK_DIR/trainfile_biggan128_imagenet
+rm -rf $TRAINFILE
 
 if [[ -d $WORK_DIR/$REPO ]]; then
   rm -rf $WORK_DIR/$REPO
@@ -44,7 +47,8 @@ echo "Making hdf5..."
 python3 ${WORK_DIR}/${REPO}/make_hdf5.py \
     --dataset ${DATASET} \
     --resolution ${RESOLUTION} \
-    --data_root ${DATA_ROOT}
+    --data_root ${DATA_ROOT} \
+    --batch_size 64
 echo "HDF5 done!"
 
 echo "Calculating inception moments..."
@@ -62,7 +66,7 @@ echo "Start training bigGAN..."
 python3 ${WORK_DIR}/${REPO}/main.py \
     --model biggan_deep \
     --dataset ${DATASET} --resolution ${RESOLUTION} \
-    --shuffle  --num_workers 8 --batch_size 256 \
+    --shuffle  --num_workers 8 --batch_size 64 \
     --data_root ${DATA_ROOT} \
     --dataset_type ${DATASET_TYPE} \
     --num_G_accumulations 1 --num_D_accumulations 1 \
@@ -78,5 +82,5 @@ python3 ${WORK_DIR}/${REPO}/main.py \
     --hier --dim_z 120 --shared_dim 128 \
     --ema --use_ema --ema_start 20000 --G_eval_mode \
     --test_every 2000 --save_every 500 --num_best_copies 5 --num_save_copies 2 --seed 0 \
-    --world-size ${N}
+    --world-size ${N} --dist-url file://${TRAINFILE} --gpu 0
 # TODO: Test distributed workflow

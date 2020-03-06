@@ -1,7 +1,7 @@
 #!/bin/bash
 
 HOME=/home/pwrai
-WORK_DIR=$HOME
+WORK_DIR=./
 PYTHON_VIRTUAL_ENVIRONMENT=wmlce
 CONDA_ROOT=${HOME}/anaconda
 REPO=BigGAN-PyTorch

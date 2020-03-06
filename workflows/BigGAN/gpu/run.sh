@@ -22,9 +22,6 @@ git clone https://github.com/alexandonian/BigGAN-PyTorch.git $WORK_DIR/$REPO
 cd $WORK_DIR/$REPO
 git checkout satori
 
-# Start from directory of script
-cd "$(dirname "${BASH_SOURCE[0]}")"
-
 mkdir -p data/ImageNet && ln -s /data/ImageNet/ILSVRC2012/train data/ImageNet/train
 mkdir runs
 
@@ -34,6 +31,6 @@ bash notebooks/setup_notebooks.sh
 export PAMI_IBV_ADAPTER_AFFINITY=0
 export NCCL_SOCKET_IFNAME=ib
 
-bash $WORKDIR/atlas/workflows/BigGAN/gpu/make_hdf5.sh
-bash $WORKDIR/atlas/workflows/BigGAN/gpu/calc_inception_moments.sh
-bash $WORKDIR/atlas/workflows/BigGAN/gpu/run_biggan128_imagenet.sh
+bash $WORK_DIR/atlas/workflows/BigGAN/gpu/make_hdf5.sh
+bash $WORK_DIR/atlas/workflows/BigGAN/gpu/calc_inception_moments.sh
+bash $WORK_DIR/atlas/workflows/BigGAN/gpu/run_biggan128_imagenet.sh

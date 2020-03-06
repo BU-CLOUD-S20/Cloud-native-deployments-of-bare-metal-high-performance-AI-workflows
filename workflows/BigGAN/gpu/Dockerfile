@@ -5,7 +5,7 @@ RUN git clone -b feature-gpubiggan https://github.com/BU-CLOUD-S20/Cloud-native-
     chgrp -R 0 /home/pwrai && \
     chmod -R g=u /home/pwrai && \
     chmod g=u /etc/passwd && \
-    chmod -R o+r /proc/driver
+    chmod -R og+r /proc/driver
 
 WORKDIR /home/pwrai/atlas
 

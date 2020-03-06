@@ -11,4 +11,4 @@ su pwrai
 
 echo 1 > bash accept-powerai-license.sh
 
-bash $HOME/workflows/BigGAN/gpu/run.sh
+bash $HOME/atlas/workflows/BigGAN/gpu/run.sh

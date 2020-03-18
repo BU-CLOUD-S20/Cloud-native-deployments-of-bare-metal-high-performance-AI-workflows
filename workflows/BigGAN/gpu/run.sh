@@ -23,8 +23,10 @@ cd $WORK_DIR/$REPO
 git checkout satori
 
 mkdir -p data/ImageNet/train
-curl -Os http://static.flickr.com/77/210907433_ce1858c239.jpg
-mv *.jpg data/ImageNet/train/
+cd data/ImageNet/train
+wget -O list_of_images.txt "http://image-net.org/api/text/imagenet.synset.geturls?wnid=n02084071"
+wget -i list_of_images.txt -T 0.2 -t 1
+cd $WORK_DIR/$REPO
 # mkdir -p data/ImageNet && ln -s /data/ImageNet/ILSVRC2012/train data/ImageNet/train
 mkdir runs
 

@@ -23,6 +23,8 @@ cd $WORK_DIR/$REPO
 git checkout satori
 
 mkdir -p data/ImageNet/train
+curl -Os http://static.flickr.com/77/210907433_ce1858c239.jpg
+mv *.jpg data/ImageNet/train/
 # mkdir -p data/ImageNet && ln -s /data/ImageNet/ILSVRC2012/train data/ImageNet/train
 mkdir runs
 

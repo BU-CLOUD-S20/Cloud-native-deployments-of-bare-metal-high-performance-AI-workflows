@@ -1,4 +1,4 @@
-FROM atlas4openshift/powerai
+FROM atlas4openshift/powerai:tmpdata
 
 RUN id && git clone -b feature-gpubiggan https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows.git /home/pwrai/atlas && \
     chgrp -R 0 /home/pwrai && \

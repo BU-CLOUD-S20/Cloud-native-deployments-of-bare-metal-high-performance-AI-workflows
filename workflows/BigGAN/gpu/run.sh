@@ -22,12 +22,13 @@ git clone https://github.com/alexandonian/BigGAN-PyTorch.git $WORK_DIR/$REPO
 cd $WORK_DIR/$REPO
 git checkout satori
 
-mkdir -p data/ImageNet/train
-cd data/ImageNet/train
-wget -O list_of_images.txt "http://image-net.org/api/text/imagenet.synset.geturls?wnid=n02084071"
-wget -i list_of_images.txt -T 0.2 -t 1
-cd $WORK_DIR/$REPO
-# mkdir -p data/ImageNet && ln -s /data/ImageNet/ILSVRC2012/train data/ImageNet/train
+# mkdir -p data/ImageNet/train
+# cd data/ImageNet/train
+# wget -O list_of_images.txt "http://image-net.org/api/text/imagenet.synset.geturls?wnid=n02084071"
+# wget -i list_of_images.txt -T 0.2 -t 1
+# cd $WORK_DIR/$REPO
+
+mkdir -p data/ImageNet && ln -s /data/ImageNet/ILSVRC2012/train data/ImageNet/train
 mkdir runs
 
 # Set up symlinks for the example notebooks

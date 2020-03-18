@@ -36,7 +36,7 @@ echo "Start training bigGAN..."
 python3 ${WORK_DIR}/${REPO}/main.py \
     --model biggan_deep \
     --dataset ${DATASET} --resolution ${RESOLUTION} \
-    --shuffle  --num_workers 8 --batch_size 1 \
+    --shuffle  --num_workers 1 --batch_size 1 \
     --data_root ${DATA_ROOT} \
     --dataset_type ${DATASET_TYPE} \
     --num_G_accumulations 1 --num_D_accumulations 1 \

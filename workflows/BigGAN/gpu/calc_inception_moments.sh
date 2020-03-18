@@ -19,5 +19,6 @@ python3 ${WORK_DIR}/${REPO}/calculate_inception_moments.py \
      --resolution ${RESOLUTION} \
      --data_root ${DATA_ROOT} \
      --dataset_type ${DATASET_TYPE} \
+     --num_workers 1 \
      --batch_size 64
 echo "Inception moments done!"

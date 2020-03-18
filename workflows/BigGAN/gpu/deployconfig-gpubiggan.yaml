@@ -2,7 +2,7 @@ apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 metadata:
   labels:
-    test: powerai
+    test: powerai-biggan
   name: gpu-biggan
   namespace: cloud-native-deployments-hp-ai
   selfLink: >-
@@ -11,51 +11,49 @@ spec:
   replicas: 1
   selector:
     deploymentconfig: gpu-biggan
-    test: powerai
+    test: powerai-biggan
   strategy:
     type: Rolling
   template:
     metadata:
       labels:
         deploymentconfig: gpu-biggan
-        test: powerai
+        test: powerai-biggan
     spec:
       containers:
-      - image: docker-registry.default.svc:5000/cloud-native-deployments-hp-ai/powerai:biggan
+      - image: docker-registry.default.svc:5000/cloud-native-deployments-hp-ai/powerai:biggan-testdata
         imagePullPolicy: Always
         name: gpu-biggan-test
-        # env:
-        #   - name: NVIDIA_VISIBLE_DEVICES
-        #     value: all
-        #   - name: NVIDIA_DRIVER_CAPABILITIES
-        #     value: "compute,utility"
-        #   - name: NVIDIA_REQUIRE_CUDA
-        #     value: "cuda>=5.0"
-        # securityContext:
-        #   allowPrivilegeEscalation: false
-        #   capabilities:
-        #     drop: ["ALL"]
-        #   seLinuxOptions:
-        #     type: nvidia_container_t
+        env:
+          - name: NVIDIA_VISIBLE_DEVICES
+            value: all
+          - name: NVIDIA_DRIVER_CAPABILITIES
+            value: "compute,utility"
+          - name: NVIDIA_REQUIRE_CUDA
+            value: "cuda>=5.0"
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop: ["ALL"]
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
-        volumeMounts:
-          - mountPath: /data/ImageNet/ILSVRC2012/train
-            name: volume-train-data
-          - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-            name: default-token-ljnb6
-            readOnly: true
-        # resources:
-        #   limits:
-        #     nvidia.com/gpu: 4
-      volumes:
-      - name: volume-train-data
-        persistentVolumeClaim:
-          claimName: 10gb-rwo
-      - name: default-token-ljnb6
-        secret:
-          defaultMode: 420
-          secretName: default-token-ljnb6
+        # volumeMounts:
+        #   - mountPath: /data/ImageNet/ILSVRC2012/train
+        #     name: volume-train-data
+        #   - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        #     name: default-token-ljnb6
+        #     readOnly: true
+        resources:
+          limits:
+            nvidia.com/gpu: 4
+      # volumes:
+      # - name: volume-train-data
+      #   persistentVolumeClaim:
+      #     claimName: 10gb-rwo
+      # - name: default-token-ljnb6
+      #   secret:
+      #     defaultMode: 420
+      #     secretName: default-token-ljnb6
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
@@ -69,8 +67,8 @@ spec:
           - gpu-biggan-test
         from:
           kind: ImageStreamTag
-          name: 'powerai:biggan'
+          name: 'powerai:biggan-testdata'
           namespace: cloud-native-deployments-hp-ai
         lastTriggeredImage: >-
-          docker-registry.default.svc:5000/cloud-native-deployments-hp-ai/powerai:biggan
+          docker-registry.default.svc:5000/cloud-native-deployments-hp-ai/powerai:biggan-testdata
       type: ImageChange

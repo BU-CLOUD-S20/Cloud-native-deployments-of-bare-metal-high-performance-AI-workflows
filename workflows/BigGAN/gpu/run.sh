@@ -22,7 +22,8 @@ git clone https://github.com/alexandonian/BigGAN-PyTorch.git $WORK_DIR/$REPO
 cd $WORK_DIR/$REPO
 git checkout satori
 
-mkdir -p data/ImageNet && ln -s /data/ImageNet/ILSVRC2012/train data/ImageNet/train
+mkdir -p data/ImageNet/train
+# mkdir -p data/ImageNet && ln -s /data/ImageNet/ILSVRC2012/train data/ImageNet/train
 mkdir runs
 
 # Set up symlinks for the example notebooks

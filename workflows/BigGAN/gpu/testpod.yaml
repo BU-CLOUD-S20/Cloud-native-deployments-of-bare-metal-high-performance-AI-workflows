@@ -17,30 +17,23 @@ spec:
         - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
           name: default-token-ljnb6
           readOnly: true
-      env:
-          - name: NVIDIA_VISIBLE_DEVICES
-            value: all
-          - name: NVIDIA_DRIVER_CAPABILITIES
-            value: "compute,utility"
-          - name: NVIDIA_REQUIRE_CUDA
-            value: "cuda>=5.0"
-      securityContext:
-        allowPrivilegeEscalation: false
-        capabilities:
-          drop: ["ALL"]
-        # seLinuxOptions:
-        #   type: nvidia_container_t
-      resources:
-        limits:
-          nvidia.com/gpu: 4
+      # env:
+      #     - name: NVIDIA_VISIBLE_DEVICES
+      #       value: all
+      #     - name: NVIDIA_DRIVER_CAPABILITIES
+      #       value: "compute,utility"
+      #     - name: NVIDIA_REQUIRE_CUDA
+      #       value: "cuda>=5.0"
+      # securityContext:
+      #   allowPrivilegeEscalation: false
+      #   capabilities:
+      #     drop: ["ALL"]
+      # resources:
+      #   limits:
+      #     nvidia.com/gpu: 1
   dnsPolicy: ClusterFirst
   imagePullSecrets:
     - name: default-dockercfg-8jxdd
-  # nodeName: bu-21-5.infra.massopen.cloud
-  # nodeSelector:
-  #   node-role.kubernetes.io/compute: 'true'
-  nodeSelector:
-    kubernetes.io/hostname: "bu-21-2.infra.massopen.cloud"
   priority: 0
   restartPolicy: Always
   schedulerName: default-scheduler

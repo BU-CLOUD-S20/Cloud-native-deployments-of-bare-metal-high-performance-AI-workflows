@@ -31,10 +31,10 @@ spec:
             value: "compute,utility"
           - name: NVIDIA_REQUIRE_CUDA
             value: "cuda>=5.0"
-        securityContext:
-          allowPrivilegeEscalation: false
-          capabilities:
-            drop: ["ALL"]
+        # securityContext:
+        #   allowPrivilegeEscalation: false
+        #   capabilities:
+        #     drop: ["ALL"]
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
         # volumeMounts:

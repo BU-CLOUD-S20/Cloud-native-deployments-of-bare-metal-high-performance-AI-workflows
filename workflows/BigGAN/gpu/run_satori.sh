@@ -31,6 +31,19 @@ if [[ -d $WORK_DIR/$REPO ]]; then
   rm -rf $WORK_DIR/$REPO
 fi
 
+
+# output cpu usage for all cpu cores every 5 seconds
+currentDateTime=`date +%Y-%m-%d-%H:%M`
+filename="cpuUsage-${currentDateTime}.txt"
+touch $WORK_DIR/$filename
+sar -u 5 >> $WORK_DIR/$filename & SAR_PID=$!
+
+# output gpu usage for all gpus every 5 seconds
+gpu_filename="gpuUsage-${currentDateTime}.txt"
+touch $WORK_DIR/$gpu_filename
+nvidia-smi --query-gpu=gpu_name,pstate,utilization.gpu,utilization.memory  --format=csv -l 5 >> $WORK_DIR/$gpu_filename & SMI_PID=$!
+
+
 git clone https://github.com/alexandonian/BigGAN-PyTorch.git $WORK_DIR/$REPO
 cd $WORK_DIR/$REPO
 git checkout satori
@@ -84,3 +97,8 @@ python3 ${WORK_DIR}/${REPO}/main.py \
     --test_every 2000 --save_every 500 --num_best_copies 5 --num_save_copies 2 --seed 0 \
     --world-size ${N} --dist-url file://${TRAINFILE} --gpu 0
 # TODO: Test distributed workflow
+
+
+#end cpu and gpu measuring processes
+kill -9 $SAR_PID
+kill -9 $SMI_PID

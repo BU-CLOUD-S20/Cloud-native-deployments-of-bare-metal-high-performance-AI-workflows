@@ -12,7 +12,7 @@ spec:
   source:
     contextDir: workflows/BigGAN/gpu
     git:
-      ref: feature-gpubiggan
+      ref: feature-gpu-openshift-measure
       uri: >-
         https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows.git
     type: Git

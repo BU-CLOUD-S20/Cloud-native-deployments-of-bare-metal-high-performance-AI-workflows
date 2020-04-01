@@ -77,6 +77,9 @@ The minimum acceptance criteria is an interface that is able to containerize and
 ## Demo 1 Presentation
 - Please find current updates on our project (via a presentation format) located [here!](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/Demo%201%20Presentation.pdf)
 
+## Demo 4 Presentation
+- Please find current updates on our project (via a presentation format) located [here!](https://docs.google.com/presentation/d/1gs5QFrgoNj_c7xnKjkHb-d1UBYfYNZ12fyD629J4mVM/edit#slide=id.g7288b6fae7_2_7)
+
 ## Optional Features
 - Automatic deploy experiments: Because tasks need to be deployed automatically, so there should have an interface or containers to automatically execute the experimental codes in two different environments.
 - Generalized: orientation is mostly towards high-performance AI workflows, but should have the capability to deploy a wide range of projects. 

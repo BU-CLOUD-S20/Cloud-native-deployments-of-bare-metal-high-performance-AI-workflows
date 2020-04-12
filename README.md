@@ -5,8 +5,8 @@
 
 # Index
 
-1. Project Proposal (# project-proposal)
-2. Sprint Presentations (# sprint-presentations)
+1. [Project Proposal](#project-proposal)
+2. [Sprint Presentations](#sprint-presentations)
 
 
 # Project Proposal

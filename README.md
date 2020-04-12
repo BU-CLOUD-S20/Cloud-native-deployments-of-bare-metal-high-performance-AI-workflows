@@ -3,6 +3,14 @@
 
 <h2 align="center"> Cloud Native Deployments of Bare-Metal High-Performance AI Workflows Proposal </h2> 
 
+# Index
+
+1. Project Proposal (# project-proposal)
+2. Sprint Presentations (# sprint-presentations)
+
+
+# Project Proposal
+
 ## 1.   Vision and Goals Of The Project:
 
 Atlas will serve as a bridge from existing bare-metal HPC clusters (example: Satori@MIT) to a native cloud environment for better resource utilization and price-efficiency. High-level goals of Atlas includes:
@@ -74,11 +82,24 @@ The minimum acceptance criteria is an interface that is able to containerize and
 - Interface to include detailed comparison between bare-metal env. & cloud-native implementations of parallel ML workflows.
 - Display under-utilized nodes in OpenShift and perhaps suggestions/actual effectuations of running backfill overloads.
 
+
+# Sprint Presentations
+
 ## Demo 1 Presentation
 - Please find current updates on our project (via a presentation format) located [here!](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/Demo%201%20Presentation.pdf)
 
+
+## Demo 2 Presentation
+- Please find current updates on our project (via a presentation format) located [here!](https://docs.google.com/presentation/d/1gs5QFrgoNj_c7xnKjkHb-d1UBYfYNZ12fyD629J4mVM/edit#slide=id.g7288b6fae7_2_7)
+
+## Demo 3 Presentation
+- Please find current updates on our project (via a presentation format) located [here!](https://docs.google.com/presentation/d/1gs5QFrgoNj_c7xnKjkHb-d1UBYfYNZ12fyD629J4mVM/edit#slide=id.g7288b6fae7_2_7)
+
+
 ## Demo 4 Presentation
 - Please find current updates on our project (via a presentation format) located [here!](https://docs.google.com/presentation/d/1gs5QFrgoNj_c7xnKjkHb-d1UBYfYNZ12fyD629J4mVM/edit#slide=id.g7288b6fae7_2_7)
+
+
 
 ## Optional Features
 - Automatic deploy experiments: Because tasks need to be deployed automatically, so there should have an interface or containers to automatically execute the experimental codes in two different environments.
@@ -97,5 +118,4 @@ The minimum acceptance criteria is an interface that is able to containerize and
     - Circumventing workflow tied to a current system.
 - Generalized: orientation is mostly towards high-performance AI workflows, but should have the capability to deploy a wide range of projects. 
 - Generalize from supporting a specific workflow to supporting a wide range of bare-metal AI workflows that uses different machine learning frameworks.
-
 

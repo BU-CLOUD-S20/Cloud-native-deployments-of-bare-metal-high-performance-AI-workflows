@@ -31,6 +31,26 @@ bash notebooks/setup_notebooks.sh
 export PAMI_IBV_ADAPTER_AFFINITY=0
 export NCCL_SOCKET_IFNAME=ib
 
+##Run jobs for CPU and GPU usage
+#
+# output cpu usage for all cpu cores every 5 seconds
+currentDateTime=`date +%Y-%m-%d-%H:%M`
+filename="cpu-training-${currentDateTime}.txt"
+touch $HOME/$filename
+sar -u 5 >> $HOME/$filename & SAR_PID=$!
+# output gpu usage for all gpus every 5 seconds
+gpu_filename="gpu-training-${currentDateTime}.txt"
+touch $HOME/$gpu_filename
+nvidia-smi --query-gpu=gpu_name,pstate,utilization.gpu,utilization.memory  --format=csv -l 5 >> $HOME/$gpu_filename & SMI_PID=$!
+#jobs for cpu and gpu usage started
+
+
 bash $WORK_DIR/atlas/workflows/BigGAN/gpu/make_hdf5.sh
 bash $WORK_DIR/atlas/workflows/BigGAN/gpu/calc_inception_moments.sh
 bash $WORK_DIR/atlas/workflows/BigGAN/gpu/run_biggan128_imagenet.sh
+
+
+
+# kill bg jobs for measuring cpu and gpu
+kill -9 $SAR_PID
+kill -9 $SMI_PID

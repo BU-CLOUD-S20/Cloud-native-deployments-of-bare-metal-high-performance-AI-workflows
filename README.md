@@ -59,7 +59,7 @@ Below is a description of the system components that are building blocks of the 
 This section discusses the implications and reasons for the design decisions made during the global architecture design.
 - **Scripts/Executables:**
 In order to compare two systems benefits, the Scripts/Executables will be needed to easily upload the codes to the bare-metal system and cloud-native (OpenShift) at the same time. And the scripts/executables will be one of the most important parts of the whole workflow since it will tell how OpenShift and Satori do to make the AI workflow work, and get the returned comparison results to the users.
-- **Containers:** On OpenShift, we should use **BuildConfig** to automatically build images for AI workflows and deploy them as containers. Each container can only serve for one application.
+- **Containers:** On OpenShift, we should use **BuildConfig** to automatically build images for AI workflows and deploy them via **DeploymentConfig** as containers. **DeploymentConfig** can be triggered to deploy a new container if **BuildConfig** is triggered. Each container can only serve for one application.
 - **Volumes:** For persistent storage, save data in containers or downloading data from internet every single time is not a wise choice, so we decide to use volume on OpenShift to store our data.
 
 ## 5. Acceptance criteria

@@ -35,9 +35,14 @@ export NCCL_SOCKET_IFNAME=ib
 #
 # output cpu usage for all cpu cores every 5 seconds
 currentDateTime=`date +%Y-%m-%d-%H:%M`
-filename="cpu-training-${currentDateTime}.txt"
-touch $HOME/$filename
-sar -u 5 >> $HOME/$filename & SAR_PID=$!
+cpu_filename="cpu-training-${currentDateTime}.txt"
+
+touch $HOME/$cpu_filename
+sar -u 5 >> $HOME/$cpu_filename & SAR_CPU_PID=$!
+
+mem_filename="mem-training-${currentDateTime}.txt"
+sar -r 5 >> $HOME/$mem_filename & SAR_MEM_PID=$!
+
 # output gpu usage for all gpus every 5 seconds
 gpu_filename="gpu-training-${currentDateTime}.txt"
 touch $HOME/$gpu_filename
@@ -52,5 +57,6 @@ bash $WORK_DIR/atlas/workflows/BigGAN/gpu/run_biggan128_imagenet.sh
 
 
 # kill bg jobs for measuring cpu and gpu
-kill -9 $SAR_PID
+kill -9 $SAR_CPU_PID
+kill -9 $SAR_MEM_PID
 kill -9 $SMI_PID

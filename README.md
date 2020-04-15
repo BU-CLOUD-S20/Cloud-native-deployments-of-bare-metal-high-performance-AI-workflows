@@ -90,7 +90,7 @@ The minimum acceptance criteria is an interface that is able to containerize and
 
 
 ## Demo 2 Presentation
-- Please find current updates on our project (via a presentation format) located [here!](https://docs.google.com/presentation/d/1j-s0qlVWeCrkNEfIl9wIiHWSyQM7cBjIjKldEjv1Swg/edit?usp=sharing)
+- Please find current updates on our project (via a presentation format) located [here!](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/Sprint%202.pdf)
 
 ## Demo 3 Presentation
 - Please find current updates on our project (via a presentation format) located [here!](https://docs.google.com/presentation/d/1J1rcBpyZu0A88GTx1C0yopMndCmbD5HWALDf6Gny4CQ/edit?usp=sharing)

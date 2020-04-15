@@ -52,6 +52,7 @@ nvidia-smi --query-gpu=gpu_name,pstate,utilization.gpu,utilization.memory  --for
 
 bash $WORK_DIR/atlas/workflows/BigGAN/gpu/make_hdf5.sh
 bash $WORK_DIR/atlas/workflows/BigGAN/gpu/calc_inception_moments.sh
+bash $WORK_DIR/atlas/workflows/BigGAN/gpu/sysbench-cpu-load.sh &
 bash $WORK_DIR/atlas/workflows/BigGAN/gpu/run_biggan128_imagenet.sh
 
 

@@ -37,3 +37,30 @@ The GPU memory is also pretty well utilized. It is Consistently measured around 
 
 ![satori gpu memory usage](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/imgs/sat-gpu-mem.png)
 
+
+# Running on OpenShift on MOC
+
+We created a docker container that runs the training process of BigGAN. We modified the instructions to run BigGAN on Satori, and use the scripts [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/tree/feature-gpubiggan/workflows/BigGAN/gpu).
+This test used 1 GPU for training. We measured the CPU usage, GPU usage and memory usage while training. 
+
+## CPU usage
+
+Here we notice that the BigGAN workflow consumes just less around 2 % CPU on average. 
+
+![openshift cpu usage](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/imgs/os-cpu.png)
+
+
+## Memory usage
+
+The memory usage lingers around 15%. For the node that we are running on, this is around 84 GB used of 541 GB available.
+
+![openshift memory usage](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/imgs/os-mem.png)
+
+## GPU & GPU memory usage
+
+The GPU is around 40% utilized. This might be because that the GPU is not used by other users. THe GPU memory usage stays between 5-10%.
+
+![openshift gpu usage](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/imgs/os-gpu.png)
+
+
+TODO: Add CPU and GPU specs, for Satori and OpenShift nodes.

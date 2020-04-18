@@ -17,6 +17,6 @@ echo "Making hdf5..."
 python3 ${WORK_DIR}/${REPO}/make_hdf5.py \
      --dataset ${DATASET} \
      --resolution ${RESOLUTION} \
-     --num_workers 1 \
+     --batch_size 64 \
      --data_root ${DATA_ROOT}
 echo "HDF5 done!"

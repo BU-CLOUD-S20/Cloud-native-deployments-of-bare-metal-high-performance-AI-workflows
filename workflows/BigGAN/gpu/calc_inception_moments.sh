@@ -8,7 +8,7 @@ DATA_ROOT="${WORK_DIR}/${REPO}/data" # Need to mount data to this path when star
 
 DATASET=ImageNet
 RESOLUTION=128
-DATASET_TYPE=ImageFolder
+DATASET_TYPE=ImageHDF5
 
 source ${CONDA_ROOT}/etc/profile.d/conda.sh
 conda activate $PYTHON_VIRTUAL_ENVIRONMENT
@@ -19,6 +19,5 @@ python3 ${WORK_DIR}/${REPO}/calculate_inception_moments.py \
      --resolution ${RESOLUTION} \
      --data_root ${DATA_ROOT} \
      --dataset_type ${DATASET_TYPE} \
-     --num_workers 1 \
      --batch_size 64
 echo "Inception moments done!"

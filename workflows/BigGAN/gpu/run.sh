@@ -18,9 +18,11 @@ if [[ -d $WORK_DIR/$REPO ]]; then
   rm -rf $WORK_DIR/$REPO
 fi
 
-git clone https://github.com/alexandonian/BigGAN-PyTorch.git $WORK_DIR/$REPO
+# git clone https://github.com/alexandonian/BigGAN-PyTorch.git $WORK_DIR/$REPO
+git clone https://github.com/shawn3298317/BigGAN-PyTorch.git $WORK_DIR/$REPO
 cd $WORK_DIR/$REPO
-git checkout satori
+# git checkout satori
+git checkout satori-fix
 
 mkdir -p data/ImageNet && ln -s /data/ImageNet/ILSVRC2012/train data/ImageNet/train
 mkdir runs
@@ -52,7 +54,7 @@ nvidia-smi --query-gpu=gpu_name,pstate,utilization.gpu,utilization.memory  --for
 
 bash $WORK_DIR/atlas/workflows/BigGAN/gpu/make_hdf5.sh
 bash $WORK_DIR/atlas/workflows/BigGAN/gpu/calc_inception_moments.sh
-bash $WORK_DIR/atlas/workflows/BigGAN/gpu/sysbench-cpu-load.sh &
+# bash $WORK_DIR/atlas/workflows/BigGAN/gpu/sysbench-cpu-load.sh &
 bash $WORK_DIR/atlas/workflows/BigGAN/gpu/run_biggan128_imagenet.sh
 
 

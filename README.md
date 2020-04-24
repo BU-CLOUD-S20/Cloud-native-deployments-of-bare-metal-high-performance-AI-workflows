@@ -11,8 +11,10 @@
 
 # Deployment instructions
 ## 0. Clone the project
-`git clone https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows.git`
-`cd Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows`
+```git
+git clone https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows.git`
+cd Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows
+```
 
 
 # Project Proposal

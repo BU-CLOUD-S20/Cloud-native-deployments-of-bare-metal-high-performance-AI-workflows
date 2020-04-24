@@ -50,6 +50,14 @@ Here we notice that the BigGAN workflow consumes just less around 2 % CPU on ave
 ![openshift cpu usage](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/imgs/os-cpu.png)
 
 
+## CPU usage multiplexed with CPU heavy workload
+
+Now, we ran a CPU-heavy workload multiplexed with the BigGAN workflow. We see that more CPU is definitely more utilized.
+
+![openshift cpu-multiplexed usage](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/imgs/os-cpu-load.png)
+
+
+
 ## Memory usage
 
 The memory usage lingers around 15%. For the node that we are running on, this is around 84 GB used of 541 GB available.

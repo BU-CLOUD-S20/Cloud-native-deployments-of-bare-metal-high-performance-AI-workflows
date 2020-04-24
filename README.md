@@ -9,12 +9,17 @@
 2. [Sprint Presentations](#sprint-presentations)
 3. [Project Report](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/Report.md)
 
-# Deployment instructions
-## 0. Clone the project
+# Deployment Instructions
+## 0. Get Started
+- clone the project
 ```
 git clone https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows.git
 cd Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows
 ```
+
+- MIT Satori
+
+- MOC OpenShift
 
 
 # Project Proposal

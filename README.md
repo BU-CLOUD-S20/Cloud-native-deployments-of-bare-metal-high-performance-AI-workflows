@@ -18,6 +18,7 @@ cd Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows
 ```
 
 - MIT Satori
+-- satori.mit.edu is the name of a new scalable AI oriented hardware resource for research computing at MIT. It is made possible by a donation through IBM Global Universities Program. Provided as a gift from IBM it will help further the aims of the new MIT Stephen A. Schwarzman College of Computing and other campus initiatives that are combining supercomputing power and AI algorithmic innovation.
 
 - MOC OpenShift
 

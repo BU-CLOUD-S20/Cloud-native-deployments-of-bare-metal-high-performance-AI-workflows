@@ -3,7 +3,7 @@
 
 We run the [BigGAN]() workflow in both [SATORI]() - MIT's super computing cluster with IBM Power PC CPUs, and on OpenShift on the [Mass Open Cloud]() also with  IBM Power PC CPUs.
 
-The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/README.md). These instructions are our starting point.
+The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/README.md#mit-satori). These instructions are our starting point.
 
 # Conclusions
 
@@ -17,7 +17,7 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 
 # Running on Satori
 
-We use the instructions to run BigGAN on Satori given [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/README.md). We use 2 GPUs for training. We measured the CPU usage, GPU usage and memory usage while training. 
+We use the instructions to run BigGAN on Satori given [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/README.md#mit-satori). We use 2 GPUs for training. We measured the CPU usage, GPU usage and memory usage while training. 
 
 ## CPU usage
 

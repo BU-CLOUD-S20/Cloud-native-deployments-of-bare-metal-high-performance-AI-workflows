@@ -18,7 +18,8 @@ cd Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows
 ```
 
 - MIT Satori
--- satori.mit.edu is the name of a new scalable AI oriented hardware resource for research computing at MIT. It is made possible by a donation through IBM Global Universities Program. Provided as a gift from IBM it will help further the aims of the new MIT Stephen A. Schwarzman College of Computing and other campus initiatives that are combining supercomputing power and AI algorithmic innovation.
+-- Satori is a GPU dense, high-performance Power 9 system developed as a collaboration between MIT and IBM. It has 64 1TB memory Power 9 nodes. Each node hosts four NVidia V100 32GB memory GPU cards. Within a node GPUs are linked by an NVLink2 network thst supports nearly to 200GB/s bi-directional transfer between GPUs. A 100Gb/s Infiniband network with microsecond user space latency connects the cluster nodes togehter.
+![Satori] (https://mit-satori.github.io/_images/Satori6.png)
 
 - MOC OpenShift
 

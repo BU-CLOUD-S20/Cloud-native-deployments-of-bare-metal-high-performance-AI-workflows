@@ -8,10 +8,10 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 # Conclusions
 
 - efficiency: measured as the ratio of useful output to total input
-- scalability: In information technology, scalability (frequently spelled scaleability) seems to have two usages: 1) It is the ability of a computer application or product (hardware or software) to continue to function well when it (or its context) is changed in size or volume in order to meet a user need. 2) It is the ability not only to function well in the rescaled situation, but to actually take full advantage of it. 
+- scalability: 1) It is the ability of a computer application or product (hardware or software) to continue to function well when it (or its context) is changed in size or volume in order to meet a user need. 2) It is the ability not only to function well in the rescaled situation, but to actually take full advantage of it. 
 - elasticity: price Elasticity is the responsiveness of demand to change in price
 - total training time: total training time of achieving an experiment
-- batch computation time: 
+- batch computation time: time to finish one batch computation
 
 # The BigGAN workflow
 

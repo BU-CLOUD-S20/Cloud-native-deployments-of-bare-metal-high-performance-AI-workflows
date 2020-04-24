@@ -24,6 +24,7 @@ cd Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows
 
 
 ### MOC OpenShift
+![Openshift](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/project-banner_moc-openshift.png)
 
 
 # Project Proposal

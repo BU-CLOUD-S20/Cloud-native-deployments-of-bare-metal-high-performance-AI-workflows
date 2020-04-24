@@ -7,11 +7,11 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 
 # Conclusions
 
-efficiency
-scalability
-elasticity
-total training time
-batch computation time
+- efficiency
+- scalability
+- elasticity
+- total training time
+- batch computation time
 
 # The BigGAN workflow
 

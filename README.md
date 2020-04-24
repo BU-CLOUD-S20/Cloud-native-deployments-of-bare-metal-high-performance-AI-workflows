@@ -11,7 +11,7 @@
 
 # Deployment Instructions
 ## 0. Get Started
-### clone the project
+### Clone the project
 ```
 git clone https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows.git
 cd Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows
@@ -20,7 +20,7 @@ cd Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows
 ### MIT Satori
 -- Satori is a GPU dense, high-performance Power 9 system developed as a collaboration between MIT and IBM. It has 64 1TB memory Power 9 nodes. Each node hosts four NVidia V100 32GB memory GPU cards. Within a node GPUs are linked by an NVLink2 network thst supports nearly to 200GB/s bi-directional transfer between GPUs. A 100Gb/s Infiniband network with microsecond user space latency connects the cluster nodes togehter.
 
-![Satori] (https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/Satori6.png)
+![Satori](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/Satori6.png)
 
 ### MOC OpenShift
 

@@ -9,6 +9,7 @@
 2. [Sprint Presentations](#sprint-presentations)
 3. [Project Report](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/Report.md)
 
+# Deployment instructions
 
 # Project Proposal
 

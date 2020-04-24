@@ -39,7 +39,7 @@ with the appropriate parameters.
 9. In order to measure sample quality during training, you will need to precompute inception moments for the datset of interest. To do this, run the corresponding lsf script with: \
 `bsub < jobs/calculate_inception_moments.lsf` \
 10. Now we are ready to submit our first training job, which can be done with any of the `jobs/biggan*` lsf scripts. 
-```
+`
 #BSUB -L /bin/bash
 #BSUB -J "BigGAN128-ImageNet"
 #BSUB -o "runs/BigGAN128-ImageNet.%J"
@@ -113,7 +113,7 @@ python $HOME2/BigGAN-PyTorch/main.py \
 kill -9 $SAR_PID
 kill -9 $SAR_MEM_PID
 kill -9 $SMI_PID
-```
+`\
 to start training a 128px resolution BigGAN-Deep model on ImageNet.
 11. During training, it's useful to monititor various training metrics, which can be done via a Jupyter Notebook. Go back to the OOD Dashboad window (labeld **My Interactive Sessions**) and go to menu option **Interactive Apps -> Jupyter Notebook**.
 12. Click the **Connect to Jupyter** button when it appears in a few moments

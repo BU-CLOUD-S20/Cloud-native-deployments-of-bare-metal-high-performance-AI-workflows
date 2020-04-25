@@ -7,7 +7,8 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 
 # Conclusions
 
-<h2 align="center"> Text... </h2>
+<h2 align="center"> Efficiency </h2>
+<h5 align="center"> Measured as the ratio of useful output to total input </h5>
 
 - Efficiency: `measured as the ratio of useful output to total input`
   - text here...

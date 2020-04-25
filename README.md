@@ -10,16 +10,19 @@
 3. [Project Report](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/Report.md)
 
 # Deployment Instructions
-## 0. Get Started
+
 ### Clone the project
 ```
 git clone https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows.git
 cd Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows
 ```
 
+### BigGAN Deep Learning
+`To understand the AI workflow (BigGAN) we will be porting from Satori into MOC's OpenShift, please visit this page` here [link to biggan]
+
 ### MIT Satori
 ![Satori](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/Satori6.png)
-- Satori is a GPU dense, high-performance Power 9 system developed as a collaboration between MIT and IBM. It has 64 1TB memory Power 9 nodes. Each node hosts four NVidia V100 32GB memory GPU cards. Within a node GPUs are linked by an NVLink2 network thst supports nearly to 200GB/s bi-directional transfer between GPUs. A 100Gb/s Infiniband network with microsecond user space latency connects the cluster nodes togehter.
+- Satori is a GPU dense, high-performance Power 9 system developed as a collaboration between MIT and IBM. It has 64 1TB memory Power 9 nodes. Each node hosts four NVidia V100 32GB memory GPU cards. Within a node GPUs are linked by an NVLink2 network thst supports nearly to 200GB/s bi-directional transfer between GPUs. A 100Gb/s Infiniband network with microsecond user space latency connects the cluster nodes together.
 
 #### To deploy on Satori do the following:
 
@@ -51,6 +54,8 @@ We use this file **[here](https://github.com/BU-CLOUD-S20/Cloud-native-deploymen
 ![Openshift](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/project-banner_moc-openshift.png)
 - The goal of The Massachusetts Open Cloud (MOC) OpenShift Service is to deploy and run the OpenShift container service in a production like environment to provide users of the MOC a container service for their projects. They are currently running two environments. The main service is high availability (HA) configured with multi-tenant option. The secondary service is more of a staging area that is currently being used to test configuration of GPU-enabled nodes.
 
+#### Node Specifications
+`list resources here...`
 
 # Project Proposal
 

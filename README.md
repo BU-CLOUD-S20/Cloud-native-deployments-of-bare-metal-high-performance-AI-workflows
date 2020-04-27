@@ -59,8 +59,8 @@ We use this file **[here](https://github.com/BU-CLOUD-S20/Cloud-native-deploymen
 1. Get access to MOC OpenShift [Here](https://p9-openshift.osh.massopen.cloud:8443)
 2. You can choose to build your own image with [buildconfig-gpybiggan](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/feature-gpubiggan/workflows/BigGAN/gpu/buildconfig-gpubiggan.yaml)
 3. Deploy a pod
--1) Auto-deploy, reuseable: import [deployconfig-gpybiggan.yaml](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/feature-gpubiggan/workflows/BigGAN/gpu/deployconfig-gpubiggan.yaml) to the OpenShift
--2) Disposable, specific pod: import [pod-biggan.yaml](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/feature-gpubiggan/workflows/BigGAN/gpu/pod-biggan.yaml) to the OpenShift
+   1) Auto-deploy, reuseable: import [deployconfig-gpybiggan.yaml](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/feature-gpubiggan/workflows/BigGAN/gpu/deployconfig-gpubiggan.yaml) to the OpenShift
+   2) Disposable, specific pod: import [pod-biggan.yaml](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/feature-gpubiggan/workflows/BigGAN/gpu/pod-biggan.yaml) to the OpenShift
 
 #### Node Specifications
 `list resources here...`

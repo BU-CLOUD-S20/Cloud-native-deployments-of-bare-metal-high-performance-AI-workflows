@@ -5,14 +5,14 @@
 
 # Index
 
-1. [BigGan Deep Learning](#BigGAN Deep Learning)
-2. [Deployment Instructions]()
+1. [BigGan Deep Learning](#biggan-deep-learning)
+2. [Deployment Instructions](#deployment-instructions)
 1. [Project Proposal](#project-proposal)
 2. [Sprint Presentations](#sprint-presentations)
 3. [Project Report](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/Report.md)
 
 # BigGAN Deep Learning
-`To understand the AI workflow (BigGAN) we will be porting from Satori into MOC's OpenShift, please visit this page` here [link to biggan] <br>
+`To understand the AI workflow (BigGAN) we will be porting from Satori into MOC's OpenShift, please visit this page` **[here](https://github.com/alexandonian/BigGAN-PyTorch) <br>
 
 
 # Deployment Instructions

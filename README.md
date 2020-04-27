@@ -61,6 +61,8 @@ We use this file **[here](https://github.com/BU-CLOUD-S20/Cloud-native-deploymen
 3. Deploy a pod
    1) Auto-deploy, reuseable: import [deployconfig-gpybiggan.yaml](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/feature-gpubiggan/workflows/BigGAN/gpu/deployconfig-gpubiggan.yaml) to the OpenShift
    2) Disposable, specific pod: import [pod-biggan.yaml](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/feature-gpubiggan/workflows/BigGAN/gpu/pod-biggan.yaml) to the OpenShift
+   ![import1](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/import-yaml1.png)
+   ![import2](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/import-yaml2.png)
 
 #### Node Specifications
 `list resources here...`

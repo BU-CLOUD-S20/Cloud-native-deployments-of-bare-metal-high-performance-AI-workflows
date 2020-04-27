@@ -13,11 +13,16 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
   - more text here...
 
 <h2 align="center"> Scalability </h2>
+<h5 align="center"> 1) It is the ability of a computer application or product (hardware or software) to continue to function well when it (or its context) is changed in size or volume in order to meet a user need. 2) It is the ability not only to function well in the rescaled situation, but to actually take full advantage of it. </h5>
 
-- scalability: 1) It is the ability of a computer application or product (hardware or software) to continue to function well when it (or its context) is changed in size or volume in order to meet a user need. 2) It is the ability not only to function well in the rescaled situation, but to actually take full advantage of it. 
-- elasticity: price Elasticity is the responsiveness of demand to change in price
-- total training time: total training time of achieving an experiment
-- batch computation time: time to finish one batch computation
+<h2 align="center"> Elasticity </h2>
+<h5 align="center"> price Elasticity is the responsiveness of demand to change in price </h5>
+
+<h2 align="center"> Total Training Time </h2>
+<h5 align="center"> total training time of achieving an experiment </h5>
+
+<h2 align="center"> Batch computation time </h2>
+<h5 align="center"> time to finish one batch computation </h5>
 
 # The BigGAN workflow
 

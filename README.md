@@ -56,6 +56,9 @@ We use this file **[here](https://github.com/BU-CLOUD-S20/Cloud-native-deploymen
 ![Openshift](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/project-banner_moc-openshift.png)
 - The goal of The Massachusetts Open Cloud (MOC) OpenShift Service is to deploy and run the OpenShift container service in a production like environment to provide users of the MOC a container service for their projects. They are currently running two environments. The main service is high availability (HA) configured with multi-tenant option. The secondary service is more of a staging area that is currently being used to test configuration of GPU-enabled nodes.
 
+1. Get access to MOC OpenShift [Here](https://p9-openshift.osh.massopen.cloud:8443)
+
+
 #### Node Specifications
 `list resources here...`
 

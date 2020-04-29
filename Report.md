@@ -17,10 +17,13 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 <h5 align="center"> 2) It is the ability not only to function well in the rescaled situation, but to actually take full advantage of it. </h5>
 
 <h2 align="center"> Elasticity </h2>
-<h5 align="center"> price Elasticity is the responsiveness of demand to change in price </h5>
+<h5 align="center"> shawn </h5>
 
 <h2 align="center"> Automation </h2>
-<h5 align="center"> fgf </h5>
+<h5 align="center"> jing </h5>
+
+<h2 align="center"> Environment Comparisons </h2>
+<h5 align="center"> shubham </h5>
 
 # The BigGAN workflow
 

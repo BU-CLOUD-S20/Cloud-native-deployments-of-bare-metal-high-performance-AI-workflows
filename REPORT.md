@@ -45,16 +45,18 @@ Compared with Satori, OpenShift does have more advantages on tasks automation. W
  shawn + jing 
 - talk about problems and solutions attempted
 
+---
+
 - Cannot get Nvidia cards in OpenShift container
   * **Solution**: expose necessary environment variables for Nvidia driver. (worked until Sprint 4)
 - Nvidia cards randomly unavaialbe
   * **Solution**: none.
   * **Workaround**: try more times. (worked until Sprint 4)
 - Cannot get enough quota for volume
-  * **Solution**: The administrator of MOC helped us after we asking it, fixed in 2 weeks.
+  * **Solution**: the administrator of MOC helped us after we asking it, fixed in 2 weeks.
 - Cannot mount volumes (Keep timeout while mouting the volume)
   * **Solution**: none.
-  * **Workaround**: none.
+  * **Workaround**: copied a small part of data into the base image to make the workflow run.
 - Cannot deploy a container (Failed to pull image in OpenShift, maybe due to the DNS error in OpenShift or MOC)
   * **Solution**: none.
   * **Workaround**: none.

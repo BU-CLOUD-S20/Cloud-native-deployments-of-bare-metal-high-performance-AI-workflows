@@ -1,24 +1,30 @@
 
-# Experiment
+<h2 align="center"> Bare Metal High Performance AI Final Report </h2>
 
-We run the [BigGAN]() workflow in both [SATORI]() - MIT's super computing cluster with IBM Power PC CPUs, and on OpenShift on the [Mass Open Cloud]() also with  IBM Power PC CPUs.
+In this project, we take an AI workfow - [BigGAN](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/README.md#mit-satori) in our case - that is operational in MIT's HPC [Satori](https://mit-satori.github.io/) (modded with IBM Power PC CPUs, NVIDIA V100 GPUs, etc.) and convert it to a running workflow on OpenShift ([Mass Open Cloud](https://massopen.cloud/)) to measure similarities and to delineate the process of moving an application from a bare metal environment to a cloud native platform.
 
 The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/README.md#mit-satori). These instructions are our starting point.
 
-index - george
+***
+# Index
+1. [Conclusions](#Conclusions)
+2. [Running On Satori](#Running-on-Satori)
+3. [Running on Mass Open Cloud](#Running-on-OpenShift-on-MOC)
 
-node specs - hao (satori vs openshfit)
+|                  | MIT Satori    | MOC  |
+| :-------------:  |:-------------:| -----:|
+| GPU Architecture | TESLA V100 32GB | TESLA V100 32GB |
+| CPU Architecture | IBM Power9       |   IBM Power9 |
 
-# Conclusions
+# 1. Conclusions
 
-<h2 align="center"> Efficiency </h2>
-<h5 align="center"> Measured as the ratio of useful output to total input </h5>
+### 1. Efficiency 
+`Measured as the ratio of useful output to total input (measured in CPU/GPU cycles here)` 
 - Text for efficiency here...
   - more text here...
 
-<h2 align="center"> Scalability </h2>
-<h5 align="center"> 1) It is the ability of a computer application or product (hardware or software) to continue to function well when it (or its context) is changed in size or volume in order to meet a user need. </h5>
-<h5 align="center"> 2) It is the ability not only to function well in the rescaled situation, but to actually take full advantage of it. </h5>
+### 2. Scalability 
+`The ability of the cloud platform to function well when it's changed in size or volume in order to meet a user need (i.e. to rescale).` 
 
 <h2 align="center"> Elasticity </h2>
 
@@ -44,26 +50,34 @@ However, **PyTorch-Elastic** only supports AWS environment with Amazon Sagemaker
 After discussion among group members, we figure that given the time and scope of our project, we might not be able to finish adapting **PyTorch-Elastic** to OpenShift environment and re-writing the BigGAN workflow using PyTorch-Elastic APIs by the end of the semester. We will leave it as a future TODO for now.
 <!-- <h5 align="center"> shawn </h5> -->
 
-<h2 align="center"> Automation </h2>
-<h5 align="center"> jing </h5>
 
-<h2 align="center"> Environment Comparisons </h2>
-<h5 align="center"> shubham </h5>
+### 4. Automation 
+Compared with Satori, OpenShift does have more advantages on tasks automation. We depolyed the AI workflow on OpenShift by using `DeploymentConfig`, `BuildConfig`, `Dockerfile`. The codes of AI workflow are on the Github repository, and we can set the triggers inside `BuildConfig` which makes `BuildConfig` be triggered after we pushing new changes to the Github repository, which can build a new image based on our new codes **automatically**, and after the build finished, it will trigger `DeploymentConfig` to start deploy a container from the image built just now **automatically**. The only thing for researchers need to do is just push the new codes, and the AI workflows can be deployed **automatically** and get the result, without requesting node resources or submitting bash jobs.
 
-<h2 align="center"> Lessons Learned </h2>
-<h5 align="center"> hao </h5>
+![](https://www.lucidchart.com/publicSegments/view/35091b47-7861-4f5d-a2e9-5e4afddfaaaf/image.png)
+
+### 5. Environment Comparisons </h2>
+ shubham 
 
 <h2 align="center"> Environment Issues </h2>
 <h5 align="center"> shawn + jing </h5>
 
-### Issue 1: Trouble accessing GPU(s) on MoC
+- Trouble accessing GPU(s) on MoC
+  * **Solution**: Specify CUDA related environment variables in deployconfig. (worked until Sprint 4)
+- Nvidia cards randomly unavailable
+  * **Solution**: None.
+  * **Workaround**: Try more times. (worked until Sprint 4)
+- Cannot get enough quota for volume
+  * **Solution**: MoC administrator granted volume to our OpenShift account.
+- Pod creation timeout when mounting volume
+  * **Solution**: Currently still blocked. Requires support from MoC.
+  * **Workaround**: Manually copied subset of data and build into our base image to make the workflow runnable.
+- Trouble pushing to internal image registry on OpenShift
+  * **Description**: OpenShift reports error when pulling/pushing image to internel image registry. Possibly due to DNS mapping error on MoC. Currently we can not run any pods that uses our image on OpenShift.
+  * **Solution**: Currently still blocked. Requires support from MoC.
+  * **Workaround**: None.
 
-### Issue 2: Trouble pushing to internal image registry on OpenShift
-
-### Issue 3: Pod creation timeout when mounting volume
-- talk about problems and solutions attempted
-
-# Running on Satori
+# 2. Running on Satori
 
 We use the instructions to run BigGAN on Satori given [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/README.md#mit-satori). We use 2 GPUs for training. We measured the CPU usage, GPU usage and memory usage while training. 
 
@@ -93,13 +107,14 @@ The GPU memory is also pretty well utilized. It is Consistently measured around 
 
 ![satori gpu memory usage](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/imgs/sat-gpu-mem.png)
 
+***
 
-# Running on OpenShift on MOC
+# 3. Running on OpenShift on MOC
 
 We created a docker container that runs the training process of BigGAN. We modified the instructions to run BigGAN on Satori, and use the scripts [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/tree/feature-gpubiggan/workflows/BigGAN/gpu).
 This test used 1 GPU for training. We measured the CPU usage, GPU usage and memory usage while training. 
 
-## CPU usage
+### CPU usage
 
 Here we notice that the BigGAN workflow consumes just less around 2 % CPU on average. 
 

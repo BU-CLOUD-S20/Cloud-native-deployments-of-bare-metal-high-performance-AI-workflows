@@ -14,34 +14,36 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 ***
 node specs - hao (satori vs openshfit)
 
-# Conclusions
+# 1. Conclusions
 
-## 1. Efficiency 
+### 1. Efficiency 
 `Measured as the ratio of useful output to total input` 
 - Text for efficiency here...
   - more text here...
 
-## 2. Scalability 
+### 2. Scalability 
 <h5 align="center"> 1) It is the ability of a computer application or product (hardware or software) to continue to function well when it (or its context) is changed in size or volume in order to meet a user need. </h5>
 <h5 align="center"> 2) It is the ability not only to function well in the rescaled situation, but to actually take full advantage of it. </h5>
 
-## 3. Elasticity 
+### 3. Elasticity 
  shawn 
 
-## 4. Automation 
+### 4. Automation 
 jing 
 
-## 5. Environment Comparisons </h2>
+### 5. Environment Comparisons </h2>
  shubham 
 
-## 6. Lessons Learned </h2>
+### 6. Lessons Learned </h2>
  hao 
 
-## 7. Environment Issues
+### 7. Environment Issues
  shawn + jing 
 - talk about problems and solutions attempted
 
-# Running on Satori
+***
+
+# 2. Running on Satori
 
 We use the instructions to run BigGAN on Satori given [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/README.md#mit-satori). We use 2 GPUs for training. We measured the CPU usage, GPU usage and memory usage while training. 
 
@@ -71,13 +73,14 @@ The GPU memory is also pretty well utilized. It is Consistently measured around 
 
 ![satori gpu memory usage](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/imgs/sat-gpu-mem.png)
 
+***
 
-# Running on OpenShift on MOC
+# 3. Running on OpenShift on MOC
 
 We created a docker container that runs the training process of BigGAN. We modified the instructions to run BigGAN on Satori, and use the scripts [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/tree/feature-gpubiggan/workflows/BigGAN/gpu).
 This test used 1 GPU for training. We measured the CPU usage, GPU usage and memory usage while training. 
 
-## CPU usage
+### CPU usage
 
 Here we notice that the BigGAN workflow consumes just less around 2 % CPU on average. 
 

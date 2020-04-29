@@ -149,10 +149,10 @@ The GPU is around 40% utilized. This might be because that the GPU is not used b
 ![openshift gpu usage](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/imgs/os-gpu.png)
 
 
-TODO: Add CPU and GPU specs, for Satori and OpenShift nodes.
----Satori: 
+Satori: 
 - 64 1TB memory Power 9 nodes
 - Each node hosts 4 NVidia V100 32GB memory GPU cards
 - Within a node, GPUs are linked by an NVLink2 network that supports nearly to 200GB/s bi-directional transfer between GPUs
 - A 100Gb/s Infiniband network with microsecond user space latency connects the cluster nodes togehter
+
 OpenShift

@@ -57,7 +57,7 @@ Compared with Satori, OpenShift does have more advantages on tasks automation. W
 - Cannot mount volumes (Keep timeout while mouting the volume)
   * **Solution**: none.
   * **Workaround**: copied a small part of data into the base image to make the workflow run.
-- Cannot deploy a container (Failed to pull image in OpenShift, maybe due to the DNS error in OpenShift or MOC)
+- Cannot deploy a container (Failed to pull image in OpenShift, maybe due to the DNS error in OpenShift or MOC, appear after Sprint 4)
   * **Solution**: none.
   * **Workaround**: none.
 ***

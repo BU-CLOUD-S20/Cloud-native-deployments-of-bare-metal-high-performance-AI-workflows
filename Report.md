@@ -55,6 +55,12 @@ After discussion among group members, we figure that given the time and scope of
 
 <h2 align="center"> Environment Issues </h2>
 <h5 align="center"> shawn + jing </h5>
+
+### Issue 1: Trouble accessing GPU(s) on MoC
+
+### Issue 2: Trouble pushing to internal image registry on OpenShift
+
+### Issue 3: Pod creation timeout when mounting volume
 - talk about problems and solutions attempted
 
 # Running on Satori

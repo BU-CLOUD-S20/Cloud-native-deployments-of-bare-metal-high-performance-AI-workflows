@@ -16,29 +16,29 @@ node specs - hao (satori vs openshfit)
 
 # Conclusions
 
-<h2 align="center"> Efficiency </h2>
-<h5 align="center"> Measured as the ratio of useful output to total input </h5>
+## 1. Efficiency 
+`Measured as the ratio of useful output to total input` 
 - Text for efficiency here...
   - more text here...
 
-<h2 align="center"> Scalability </h2>
+## 2. Scalability 
 <h5 align="center"> 1) It is the ability of a computer application or product (hardware or software) to continue to function well when it (or its context) is changed in size or volume in order to meet a user need. </h5>
 <h5 align="center"> 2) It is the ability not only to function well in the rescaled situation, but to actually take full advantage of it. </h5>
 
-<h2 align="center"> Elasticity </h2>
-<h5 align="center"> shawn </h5>
+## 3. Elasticity 
+ shawn 
 
-<h2 align="center"> Automation </h2>
-<h5 align="center"> jing </h5>
+## 4. Automation 
+jing 
 
-<h2 align="center"> Environment Comparisons </h2>
-<h5 align="center"> shubham </h5>
+## 5. Environment Comparisons </h2>
+ shubham 
 
-<h2 align="center"> Lessons Learned </h2>
-<h5 align="center"> hao </h5>
+## 6. Lessons Learned </h2>
+ hao 
 
-<h2 align="center"> Environment Issues </h2>
-<h5 align="center"> shawn + jing </h5>
+## 7. Environment Issues
+ shawn + jing 
 - talk about problems and solutions attempted
 
 # Running on Satori

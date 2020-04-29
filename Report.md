@@ -17,13 +17,12 @@ node specs - hao (satori vs openshfit)
 # 1. Conclusions
 
 ### 1. Efficiency 
-`Measured as the ratio of useful output to total input` 
+`Measured as the ratio of useful output to total input (measured in CPU/GPU cycles here)` 
 - Text for efficiency here...
   - more text here...
 
 ### 2. Scalability 
-<h5 align="center"> 1) It is the ability of a computer application or product (hardware or software) to continue to function well when it (or its context) is changed in size or volume in order to meet a user need. </h5>
-<h5 align="center"> 2) It is the ability not only to function well in the rescaled situation, but to actually take full advantage of it. </h5>
+`The ability of the cloud platform to function well when it's changed in size or volume in order to meet a user need (i.e. to rescale).` 
 
 ### 3. Elasticity 
  shawn 

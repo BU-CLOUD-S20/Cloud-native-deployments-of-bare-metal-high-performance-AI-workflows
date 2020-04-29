@@ -150,7 +150,7 @@ The GPU is around 40% utilized. This might be because that the GPU is not used b
 
 
 TODO: Add CPU and GPU specs, for Satori and OpenShift nodes.
-Satori: 
+---Satori: 
 - 64 1TB memory Power 9 nodes
 - Each node hosts 4 NVidia V100 32GB memory GPU cards
 - Within a node, GPUs are linked by an NVLink2 network that supports nearly to 200GB/s bi-directional transfer between GPUs

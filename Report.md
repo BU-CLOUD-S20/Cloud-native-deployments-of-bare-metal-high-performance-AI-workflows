@@ -1,7 +1,6 @@
+<h2 align="center"> Bare Metal High Performance AI Final Report </h2>
 
-# Experiment
-
-We run the [BigGAN]() workflow in both [SATORI]() - MIT's super computing cluster with IBM Power PC CPUs, and on OpenShift on the [Mass Open Cloud]() also with  IBM Power PC CPUs.
+In this project, we take an AI workfow - [BigGAN]() in our case - that is operational in MIT's HPC [SATORI]() (modded with IBM Power PC CPUs, NVIDIA V100 GPUs, etc.) and convert it to a running workflow on OpenShift ([Mass Open Cloud]()) to measure similarities and to delineate the process of moving an application from a bare metal environment to a cloud native platform.
 
 The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/README.md#mit-satori). These instructions are our starting point.
 
@@ -11,7 +10,7 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 2. [Running On Satori](#Running-on-Satori)
 3. [Running on Mass Open Cloud](#Running-on-OpenShift-on-MOC)
 
-***
+# Platform Specs
 node specs - hao (satori vs openshfit)
 
 # 1. Conclusions

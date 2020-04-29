@@ -5,7 +5,10 @@ We run the [BigGAN]() workflow in both [SATORI]() - MIT's super computing cluste
 
 The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/README.md#mit-satori). These instructions are our starting point.
 
-index - george
+1. [Conclusions](#Conclusions)
+2. [Running On Satori](# Running-on-Satori)
+3. [Project Proposal](#Running-on-OpenShift-on-MOC)
+
 
 node specs - hao (satori vs openshfit)
 

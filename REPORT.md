@@ -40,6 +40,9 @@ Compared with Satori, OpenShift does have more advantages on tasks automation. W
 
 ### 6. Lessons Learned </h2>
  hao 
+ 
+1. We should ask for mentors' help as soon as possible instead of trying debugging the issue by ourselves so that we may not stuck into one problem for a long time.
+2. // TODO
 
 ### 7. Environment Issues
  shawn + jing 

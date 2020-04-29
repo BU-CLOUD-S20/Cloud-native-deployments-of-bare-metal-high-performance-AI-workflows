@@ -19,6 +19,9 @@ git checkout -b satori --track origin/satori
 # TODO: Separate the steps into multiple scripts and
 #       monitor the output of each intermediate step.
 
+# output cpu usage for all cpu cores every 5 seconds
+sar -u 5 > $WORK_DIR/cpu-usage.txt & set SAR_PID=$!
+
 cd ${WORK_DIR}
 echo "Making hdf5..."
 python3 ${WORK_DIR}/BigGAN-PyTorch/make_hdf5.py \
@@ -64,3 +67,6 @@ python3 ${WORK_DIR}/BigGAN-PyTorch/main.py \
     #--dist-url file://${TRAINFILE}
     #--multiprocessing-distributed \
 # TODO: Test distributed workflow
+
+
+kill -9 $SAR_PID

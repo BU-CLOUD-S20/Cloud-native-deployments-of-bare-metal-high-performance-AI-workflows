@@ -26,9 +26,7 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 <h5 align="center"> shubham </h5>
 
 <h2 align="center"> Lessons Learned </h2>
-<h5 align="center"> hao </h5>
-
-# The BigGAN workflow
+<h5 align="center"> hao </h5> 
 
 # Running on Satori
 

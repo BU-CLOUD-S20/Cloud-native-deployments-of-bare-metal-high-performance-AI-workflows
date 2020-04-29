@@ -33,7 +33,7 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 ### 4. Automation 
 Compared with Satori, OpenShift does have more advantages on tasks automation. We depolyed the AI workflow on OpenShift by using `DeploymentConfig`, `BuildConfig`, `Dockerfile`. The codes of AI workflow are on the Github repository, and we can set the triggers inside `BuildConfig` which makes `BuildConfig` be triggered after we pushing new changes to the Github repository, which can build a new image based on our new codes **automatically**, and after the build finished, it will trigger `DeploymentConfig` to start deploy a container from the image built just now **automatically**. The only thing for researchers need to do is just push the new codes, and the AI workflows can be deployed **automatically** and get the result, without requesting node resources or submitting bash jobs.
 
-![](https://www.lucidchart.com/publicSegments/view/e95c11a1-8e0b-49e5-8a83-46f7f367ed46/image.png)
+![](https://www.lucidchart.com/publicSegments/view/35091b47-7861-4f5d-a2e9-5e4afddfaaaf/image.png)
 
 ### 5. Environment Comparisons </h2>
  shubham 

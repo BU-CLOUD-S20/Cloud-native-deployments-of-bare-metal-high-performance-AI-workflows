@@ -1,7 +1,7 @@
 
 <h2 align="center"> Bare Metal High Performance AI Final Report </h2>
 
-In this project, we take an AI workfow - [BigGAN]() in our case - that is operational in MIT's HPC [Satori](https://mit-satori.github.io/) (modded with IBM Power PC CPUs, NVIDIA V100 GPUs, etc.) and convert it to a running workflow on OpenShift ([Mass Open Cloud](https://massopen.cloud/)) to measure similarities and to delineate the process of moving an application from a bare metal environment to a cloud native platform.
+In this project, we take an AI workfow - [BigGAN](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/README.md#mit-satori) in our case - that is operational in MIT's HPC [Satori](https://mit-satori.github.io/) (modded with IBM Power PC CPUs, NVIDIA V100 GPUs, etc.) and convert it to a running workflow on OpenShift ([Mass Open Cloud](https://massopen.cloud/)) to measure similarities and to delineate the process of moving an application from a bare metal environment to a cloud native platform.
 
 The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/README.md#mit-satori). These instructions are our starting point.
 
@@ -11,8 +11,11 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 2. [Running On Satori](#Running-on-Satori)
 3. [Running on Mass Open Cloud](#Running-on-OpenShift-on-MOC)
 
-# Platform Specs
-node specs - hao (satori vs openshfit)
+|                  | MIT Satori    | MOC  |
+| :-------------:  |:-------------:| -----:|
+| GPU Architecture | TESLA V100 32GB | $1600 |
+| CPU Architecture | IBM Power9       |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 # 1. Conclusions
 

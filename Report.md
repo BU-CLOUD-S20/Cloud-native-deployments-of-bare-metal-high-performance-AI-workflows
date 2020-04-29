@@ -7,6 +7,8 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 
 index - george
 
+node specs - hao (satori vs openshfit)
+
 # Conclusions
 
 <h2 align="center"> Efficiency </h2>

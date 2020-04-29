@@ -19,11 +19,8 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 <h2 align="center"> Elasticity </h2>
 <h5 align="center"> price Elasticity is the responsiveness of demand to change in price </h5>
 
-<h2 align="center"> Total Training Time </h2>
-<h5 align="center"> total training time of achieving an experiment </h5>
-
-<h2 align="center"> Batch computation time </h2>
-<h5 align="center"> time to finish one batch computation </h5>
+<h2 align="center"> Automation </h2>
+<h5 align="center"> fgf </h5>
 
 # The BigGAN workflow
 

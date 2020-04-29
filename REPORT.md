@@ -60,7 +60,7 @@ Compared with Satori, OpenShift does have more advantages on tasks automation. W
  shubham 
 
 <h2 align="center"> Environment Issues </h2>
-<h5 align="center"> shawn + jing </h5>
+<!-- <h5 align="center"> shawn + jing </h5> -->
 
 - Trouble accessing GPU(s) on MoC
   * **Solution**: Specify CUDA related environment variables in deployconfig. (worked until Sprint 4)
@@ -76,6 +76,13 @@ Compared with Satori, OpenShift does have more advantages on tasks automation. W
   * **Description**: OpenShift reports error when pulling/pushing image to internel image registry. Possibly due to DNS mapping error on MoC. Currently we can not run any pods that uses our image on OpenShift.
   * **Solution**: Currently still blocked. Requires support from MoC.
   * **Workaround**: None.
+
+### 6. Lessons Learned </h2>
+ hao 
+ 
+1. We should ask for mentors' help as soon as possible instead of trying debugging the issue by ourselves so that we may not stuck into one problem for a long time.
+2. // TODO
+
 
 # 2. Running on Satori
 

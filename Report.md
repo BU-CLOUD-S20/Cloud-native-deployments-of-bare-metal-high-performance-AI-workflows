@@ -28,7 +28,11 @@ index - george
 <h5 align="center"> shubham </h5>
 
 <h2 align="center"> Lessons Learned </h2>
-<h5 align="center"> hao </h5> 
+<h5 align="center"> hao </h5>
+
+<h2 align="center"> Environment Issues </h2>
+<h5 align="center"> shawn + jing </h5>
+- talk about problems and solutions attempted
 
 # Running on Satori
 

@@ -155,3 +155,10 @@ Satori:
 - A 100Gb/s Infiniband network with microsecond user space latency connects the cluster nodes togehter
 
 OpenShift
+- Red Hat Enterprise Linux 7.5, CentOS PostgreSQL 10 image
+- OpenShift Container Platform 3.10 Cluster running on AWS
+- Container Runtime: crio-1.10.5 or docker-1.13.1
+- Container Tools: podman-0.6.1, buildah-1.1, skopeo-0.1.30
+- Master node: m4.xlarge
+- Infra node: m4.xlarge
+- Compute node: p3.2xlarge (One NVIDIA Tesla V100 GPU, 8vCPUs and 61GB RAM)

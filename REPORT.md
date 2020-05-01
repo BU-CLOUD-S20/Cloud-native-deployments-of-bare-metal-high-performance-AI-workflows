@@ -18,15 +18,15 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 
 # 1. Conclusions
 
-### 1. Efficiency 
+<!-- ### 1. Efficiency 
 `Measured as the ratio of useful output to total input (measured in CPU/GPU cycles here)` 
 - Text for efficiency here...
-  - more text here...
+  - more text here... -->
 
-### 2. Scalability 
-`The ability of the cloud platform to function well when it's changed in size or volume in order to meet a user need (i.e. to rescale).` 
+<!-- ### 2. Scalability 
+`The ability of the cloud platform to function well when it's changed in size or volume in order to meet a user need (i.e. to rescale).`  -->
 
-<h2 align="center"> Elasticity </h2>
+## 1. Elasticity
 
 We selected the BigGAN workflow from a pool of [tutorial examples](https://mit-satori.github.io/tutorial-examples/index.html) offered on the Satori platform.  
 
@@ -51,20 +51,20 @@ After discussion among group members, we figure that given the time and scope of
 <!-- <h5 align="center"> shawn </h5> -->
 
 
-### 4. Automation 
+## 2. Automation 
 Compared with Satori, OpenShift does have more advantages on tasks automation. We depolyed the AI workflow on OpenShift by using `DeploymentConfig`, `BuildConfig`, `Dockerfile`. The codes of AI workflow are on the Github repository, and we can set the triggers inside `BuildConfig` which makes `BuildConfig` be triggered after we pushing new changes to the Github repository, which can build a new image based on our new codes **automatically**, and after the build finished, it will trigger `DeploymentConfig` to start deploy a container from the image built just now **automatically**. The only thing for researchers need to do is just push the new codes, and the AI workflows can be deployed **automatically** and get the result, without requesting node resources or submitting bash jobs.
 
 ![](https://www.lucidchart.com/publicSegments/view/35091b47-7861-4f5d-a2e9-5e4afddfaaaf/image.png)
 
-### 5. Environment Comparisons </h2>
+## 3. Environment Comparisons
  
 ![Typical AI workflow](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/ai-workflow.png)
 
-#### Components
+### Components
 
 A typical AI workflow has deals with a lot state. The computation steps are resource intensive and long running. The model training step can run for a few days on the training datasets of size ~200 GB even on powerful hardware such as the Telsa V100 GPUs. The output model is contantly iterated upon during carious trainig loops, and the state is checkpointed typically at the end of every epoch.
 
-#### Scheduling
+### Scheduling
 
 In a traditional HPC system like Satori, to run a job, you submit a  request for specific amount of resources, e.g. 4 GPUs and 2 CPUs. The scheduler waits for the resources to free, and then assigns the job.
 
@@ -89,7 +89,7 @@ In a Kubernetes based environment, you make request to the scheduler, and the sc
   * **Solution**: Currently still blocked. Requires support from MoC.
   * **Workaround**: None.
 
-### 6. Lessons Learned </h2>
+## 4. Lessons Learned
 1. We should ask for mentors' help as soon as possible instead of trying debugging the issue by ourselves so that we may not stuck into one problem for a long time.
 2. We should make an alternative plan to make sure what we can at least achieve before each sprint started (based on Covid-19 situation), so we can handle the situation which may delay our progress.
 3. We should set up a weekly group time for working together, which is more efficiently integrating our work (we actually started this after sprint 3).
@@ -168,7 +168,8 @@ Satori:
 
 OpenShift
 - Red Hat Enterprise Linux 7.5, CentOS PostgreSQL 10 image
-- OpenShift Container Platform 3.10 Cluster running on AWS
+<!-- Are we sure this is running on AWS? That seems odd -->
+<!-- - OpenShift Container Platform 3.10 Cluster running on AWS -->
 - Container Runtime: crio-1.10.5 or docker-1.13.1
 - Container Tools: podman-0.6.1, buildah-1.1, skopeo-0.1.30
 - Master node: m4.xlarge

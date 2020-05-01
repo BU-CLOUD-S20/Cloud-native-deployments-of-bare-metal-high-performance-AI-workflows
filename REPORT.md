@@ -14,7 +14,7 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 |                  | MIT Satori    | MOC  |
 | :-------------:  |:-------------:| -----:|
 | GPU Architecture | TESLA V100 32GB | TESLA V100 32GB |
-| CPU Architecture | IBM Power9       |   IBM Power9 |
+| CPU Architecture | IBM Power9      |   IBM Power9 |
 
 # 1. Conclusions
 
@@ -57,7 +57,19 @@ Compared with Satori, OpenShift does have more advantages on tasks automation. W
 ![](https://www.lucidchart.com/publicSegments/view/35091b47-7861-4f5d-a2e9-5e4afddfaaaf/image.png)
 
 ### 5. Environment Comparisons </h2>
- shubham 
+ 
+![Typical AI workflow](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/ai-workflow.png)
+
+#### Components
+
+A typical AI workflow has deals with a lot state. The computation steps are resource intensive and long running. The model training step can run for a few days on the training datasets of size ~200 GB even on powerful hardware such as the Telsa V100 GPUs. The output model is contantly iterated upon during carious trainig loops, and the state is checkpointed typically at the end of every epoch.
+
+#### Scheduling
+
+In a traditional HPC system like Satori, to run a job, you submit a  request for specific amount of resources, e.g. 4 GPUs and 2 CPUs. The scheduler waits for the resources to free, and then assigns the job.
+
+In a Kubernetes based environment, you make request to the scheduler, and the scheduler tries its best to provide you with the request resouces. However, it is not guaranteed that the resources alloted to you will not change during the lifecycle of the computation.
+
 
 <h2 align="center"> Environment Issues </h2>
 <!-- <h5 align="center"> shawn + jing </h5> -->

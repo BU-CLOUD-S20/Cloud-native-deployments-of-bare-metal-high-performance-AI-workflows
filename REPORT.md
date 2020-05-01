@@ -36,7 +36,7 @@ We further investigate whether these software frameworks allow dynamic resource 
 
 Since the BigGAN workflow is written in PyTorch, we wil focus on discussing the possibility of running/training Pytorch programs in an "elastic manner":
 
-### Elasticity for PyTorch
+### 1.1 Elasticity for PyTorch
 According to Pytorch documentation [link here](https://pytorch.org/blog/pytorch-adds-new-tools-and-libraries-welcomes-preferred-networks-to-its-community/#tools-for-elastic-training-and-large-scale-computer-vision),  current PyTorch parallelism is achieved by something called **Distributed Data Parallel (DPP)** module, and it has following short-commings:  
 
 1. Parallel jobs cannot start without aquiring all the request nodes(pod/containers).
@@ -60,18 +60,19 @@ Compared with Satori, OpenShift does have more advantages on tasks automation. W
  
 ![Typical AI workflow](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/ai-workflow.png)
 
-### Components
+### 3.1 Components
 
-A typical AI workflow has deals with a lot state. The computation steps are resource intensive and long running. The model training step can run for a few days on the training datasets of size ~200 GB even on powerful hardware such as the Telsa V100 GPUs. The output model is contantly iterated upon during carious trainig loops, and the state is checkpointed typically at the end of every epoch.
+A typical AI workflow has deals with a lot state. The computation steps are resource intensive and long running. The model training step can run for a few days on the training datasets of size ~200 GB even on powerful hardware such as the Telsa V100 GPUs. The output model is contantly iterated upon during at the end of training loops, and the state is checkpointed typically at the end of every epoch.
 
-### Scheduling
+### 3.2 Scheduling
 
 In a traditional HPC system like Satori, to run a job, you submit a  request for specific amount of resources, e.g. 4 GPUs and 2 CPUs. The scheduler waits for the resources to free, and then assigns the job.
 
 In a Kubernetes based environment, you make request to the scheduler, and the scheduler tries its best to provide you with the request resouces. However, it is not guaranteed that the resources alloted to you will not change during the lifecycle of the computation.
 
 
-<h2 align="center"> Environment Issues </h2>
+### 3.3 Environment Issues
+<!-- <h2 align="center"> Environment Issues </h2> -->
 <!-- <h5 align="center"> shawn + jing </h5> -->
 
 - Trouble accessing GPU(s) on MoC

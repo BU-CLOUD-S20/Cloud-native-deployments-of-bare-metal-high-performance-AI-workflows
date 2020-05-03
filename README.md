@@ -5,10 +5,70 @@
 
 # Index
 
-1. [Project Proposal](#project-proposal)
-2. [Sprint Presentations](#sprint-presentations)
-3. [Project Report](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/Report.md)
+1. [BigGan Deep Learning](#biggan-deep-learning)
+2. [Deployment Instructions](#deployment-instructions)
+3. [Project Proposal](#project-proposal)
+4. [Sprint Presentations](#sprint-presentations)
+5. [Project Report](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/REPORT.md)
 
+# BigGAN Deep Learning
+To understand the AI workflow (BigGAN) we will be porting from Satori into MOC's OpenShift, please visit this page [Here](https://github.com/alexandonian/BigGAN-PyTorch) <br>
+
+
+# Deployment Instructions
+
+### Clone the project
+```
+git clone https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows.git
+cd Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows
+```
+
+
+### MIT Satori
+![Satori](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/Satori6.png)
+- Satori is a GPU dense, high-performance Power 9 system developed as a collaboration between MIT and IBM. It has 64 1TB memory Power 9 nodes. Each node hosts four NVidia V100 32GB memory GPU cards. Within a node GPUs are linked by an NVLink2 network thst supports nearly to 200GB/s bi-directional transfer between GPUs. A 100Gb/s Infiniband network with microsecond user space latency connects the cluster nodes together.
+
+#### To deploy on Satori do the following:
+
+1. Get access to Satori following instructions in the [Satori Documentation](https://mit-satori.github.io/satori-basics.html)
+2. Point your browse to the [Satori Open On-Demand (OOD)  portal](https://satori-portal.mit.edu/pun/sys/dashboard)
+3. Set up and activate the [IBM Watson Machine Learning Community Edition (WMLCE)](https://mit-satori.github.io/satori-ai-frameworks.html#) conda environment.
+4. On the top menu bar got to **Clusters -> Satori Shell Access**.
+5. In the  shell get the test repo by typing  **git clone <https://github.com/alexandonian/BigGAN-PyTorch.git>**. Please read the README of that repo for an in-depth explanation of the steps we will complete.
+6. Once the repo has been cloned, check out the `satori` branch with: \
+`git checkout -b satori --track origin/satori`
+7. Next, run the setup script with: \
+`sh setup.sh` \
+to prepare some data directories and symlinks. Currently, ImageNet is the only shared dataset stored on Satori under `/data/ImageNet`; however, more may be added in the future.
+8. (Optional): To prepare your dataset as a single HDF5 file, please run \
+`bsub < jobs/make_hdf5.lsf` \
+with the appropriate parameters.
+9. In order to measure sample quality during training, you will need to precompute inception moments for the datset of interest. To do this, run the corresponding lsf script with: \
+`bsub < jobs/calculate_inception_moments.lsf` \
+10. Now we are ready to submit our first training job, which can be done with any of the `jobs/biggan*` lsf scripts. 
+We use this file **[here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/modified%20job)**.
+11. During training, it's useful to monititor various training metrics, which can be done via a Jupyter Notebook. Go back to the OOD Dashboad window (labeld **My Interactive Sessions**) and go to menu option **Interactive Apps -> Jupyter Notebook**.
+12. Click the **Connect to Jupyter** button when it appears in a few moments
+13. When Jupyter comes up for the first time, you may be prompted to select a kernel, If so, choose the default **Python 3 PowerAI**
+14. Use the left navigation pane to find the git repo directory (**BigGAN-PyTorch**) you downloaded in step 4. Click into `BigGAN-PyTorch/notebooks` and double click on the Jupyter notebook **Monitor.ipynb**.
+
+
+
+### MOC OpenShift
+![Openshift](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/project-banner_moc-openshift.png)
+- The goal of The Massachusetts Open Cloud (MOC) OpenShift Service is to deploy and run the OpenShift container service in a production like environment to provide users of the MOC a container service for their projects. They are currently running two environments. The main service is high availability (HA) configured with multi-tenant option. The secondary service is more of a staging area that is currently being used to test configuration of GPU-enabled nodes.
+
+1. Get access to MOC OpenShift [Here](https://p9-openshift.osh.massopen.cloud:8443)
+2. You can choose to build your own image with [buildconfig-gpybiggan](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/feature-gpubiggan/workflows/BigGAN/gpu/buildconfig-gpubiggan.yaml)
+3. Deploy a pod
+   1) Auto-deploy, reuseable: import [deployconfig-gpybiggan.yaml](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/feature-gpubiggan/workflows/BigGAN/gpu/deployconfig-gpubiggan.yaml) to the OpenShift
+   2) Disposable, specific pod: import [pod-biggan.yaml](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/feature-gpubiggan/workflows/BigGAN/gpu/pod-biggan.yaml) to the OpenShift
+   ![import1](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/import-yaml1.png)
+   ![import2](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/import-yaml2.png)
+   Remember to change spec/containers/name for each pod you created
+
+#### Node Specifications
+`list resources here...`
 
 # Project Proposal
 
@@ -86,23 +146,7 @@ The minimum acceptance criteria is an interface that is able to containerize and
 
 # Sprint Presentations
 
-## Demo 1 Presentation
-- Please find current updates on our project (via a presentation format) located [here!](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/Demo%201%20Presentation.pdf)
-
-
-## Demo 2 Presentation
-- Please find current updates on our project (via a presentation format) located [here!](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/Sprint%202.pdf)
-
-## Demo 3 Presentation
-- Please find current updates on our project (via a presentation format) located [here!](https://docs.google.com/presentation/d/1J1rcBpyZu0A88GTx1C0yopMndCmbD5HWALDf6Gny4CQ/edit?usp=sharing)
-
-
-## Demo 4 Presentation
-- Please find current updates on our project (via a presentation format) located [here!](https://docs.google.com/presentation/d/1gs5QFrgoNj_c7xnKjkHb-d1UBYfYNZ12fyD629J4mVM/edit?usp=sharing)
-
-## Demo 5 Presentation
-- Please find current updates on our project (via a presentation format) located [here!](https://docs.google.com/presentation/d/1gs5QFrgoNj_c7xnKjkHb-d1UBYfYNZ12fyD629J4mVM/edit?usp=sharing)
-
+You find them [Here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/doc/Sprint-Presentations-inde.mdx)
 
 
 ## Optional Features

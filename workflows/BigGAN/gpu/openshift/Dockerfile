@@ -11,5 +11,5 @@ ENV NVIDIA_REQUIRE_CUDA=cuda>="10.1"
 
 WORKDIR /home/pwrai/atlas
 
-ENTRYPOINT ["/bin/bash", "./workflows/BigGAN/gpu/entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "./workflows/BigGAN/gpu/openshift/entrypoint.sh"]
 # USER 2051

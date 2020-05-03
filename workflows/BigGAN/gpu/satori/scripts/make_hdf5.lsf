@@ -1,0 +1,46 @@
+#BSUB -L /bin/bash
+#BSUB -J "make_hdf5"
+#BSUB -o "make_hdf5.%J.out"
+#BSUB -e "make_hdf5.%J.err"
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+#BSUB -gpu "num=1"
+#BSUB -q "normal"
+
+#
+# Setup User Environement (Python, WMLCE virtual environment etc)
+#
+HOME2=/nobackup/users/$(whoami)
+PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
+CONDA_ROOT=$HOME2/anaconda3
+
+DATA_ROOT=data
+DATASET=ImageNet
+RESOLUTION=128
+
+source ${CONDA_ROOT}/etc/profile.d/conda.sh
+conda activate $PYTHON_VIRTUAL_ENVIRONMENT
+export EGO_TOP=/opt/ibm/spectrumcomputing
+
+
+cat > set.sh << EoF_s
+#! /bin/sh
+# Set up the GPUs; only one process per node should do this
+if [ \${OMPI_COMM_WORLD_LOCAL_RANK} -eq 0 ]; then
+  ppc64_cpu --smt                        # Verify the SMT mode
+fi
+EoF_s
+chmod +x set.sh
+mpirun --tag-output ./set.sh
+
+# Run the program
+export PAMI_IBV_ADAPTER_AFFINITY=0
+export NCCL_SOCKET_IFNAME=ib
+
+python $HOME2/BigGAN-PyTorch/make_hdf5.py \
+    --dataset ${DATASET} \
+    --resolution ${RESOLUTION} \
+    --batch_size 64 \
+    --data_root ${DATA_ROOT}
+
+/bin/rm -f set.sh

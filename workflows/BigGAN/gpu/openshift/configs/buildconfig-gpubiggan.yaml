@@ -10,7 +10,7 @@ spec:
       name: 'powerai:tmpdata'
   runPolicy: Serial
   source:
-    contextDir: workflows/BigGAN/gpu
+    contextDir: workflows/BigGAN/gpu/openshift
     git:
       ref: feature-gpubiggan
       uri: >-

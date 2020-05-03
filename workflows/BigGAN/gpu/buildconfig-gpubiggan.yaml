@@ -1,0 +1,25 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: powerai-biggan
+  namespace: cloud-native-deployments-hp-ai
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'powerai:tmpdata'
+  runPolicy: Serial
+  source:
+    contextDir: workflows/BigGAN/gpu
+    git:
+      ref: feature-gpubiggan
+      uri: >-
+        https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows.git
+    type: Git
+  strategy:
+    dockerStrategy:
+      from:
+        kind: DockerImage
+        name: atlas4openshift/powerai:tmpdata
+      noCache: true
+    type: Docker

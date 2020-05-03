@@ -31,29 +31,11 @@ spec:
             value: "compute,utility"
           - name: NVIDIA_REQUIRE_CUDA
             value: "cuda>=5.0"
-        # securityContext:
-        #   allowPrivilegeEscalation: false
-        #   capabilities:
-        #     drop: ["ALL"]
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
-        # volumeMounts:
-        #   - mountPath: /data/ImageNet/ILSVRC2012/train
-        #     name: volume-train-data
-        #   - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-        #     name: default-token-ljnb6
-        #     readOnly: true
         resources:
           limits:
             nvidia.com/gpu: 4
-      # volumes:
-      # - name: volume-train-data
-      #   persistentVolumeClaim:
-      #     claimName: 10gb-rwo
-      # - name: default-token-ljnb6
-      #   secret:
-      #     defaultMode: 420
-      #     secretName: default-token-ljnb6
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler

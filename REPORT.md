@@ -71,7 +71,16 @@ In a traditional HPC system like Satori, to run a job, you submit a  request for
 In a Kubernetes based environment, you make request to the scheduler, and the scheduler tries its best to provide you with the request resouces. However, it is not guaranteed that the resources alloted to you will not change during the lifecycle of the computation.
 
 
-### 3.3 Environment Issues
+### 3.3 Software Style
+
+One consequence of the type of resource allocation, the actual program needs to be resilient to changes in resources available to programs. Software written to be cloud native have evolved to be resilient to failures. Cloud native software generally is built with decoupled state and computation. 
+
+Our experience with the current AI workflows is that the programs are written assuming fixed resources. There is ongoing work in major frameworks to make them elastic. However, these are not yet in active use. Software running on top of Kubernetes runs in containers. Containers are standard units of software execution. They package up all the code and dependencies, easing portability. Program State or storage is an extension to this container model. By default, all writes inside a container are lost when the container no longer exists. To persist the writes, you either mount a volume, or do writes to a stable storage outside your container. e.g. write to Amazon S3.
+
+To move an existing AI workflow to the cloud, you have to ensure that you have access to sufficient external storage that you can store your model and data to as external volume.
+
+
+### 3.4 Environment Issues
 <!-- <h2 align="center"> Environment Issues </h2> -->
 <!-- <h5 align="center"> shawn + jing </h5> -->
 

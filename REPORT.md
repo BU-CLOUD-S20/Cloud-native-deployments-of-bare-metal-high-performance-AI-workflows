@@ -132,11 +132,12 @@ To move an existing AI workflow to the cloud, you have to ensure that you have a
   * **Solution**: Currently still blocked. Requires support from MoC.
   * **Workaround**: None.
 
+### 3.4 Cost Analysis
+
 ## 4. Lessons Learned
 1. We should ask for mentors' help as soon as possible instead of trying debugging the issue by ourselves so that we may not stuck into one problem for a long time.
 2. We should make an alternative plan to make sure what we can at least achieve before each sprint started (based on Covid-19 situation), so we can handle the situation which may delay our progress.
 3. We should set up a weekly group time for working together, which is more efficiently integrating our work (we actually started this after sprint 3).
-
 
 # 2. Running on Satori
 

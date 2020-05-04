@@ -14,6 +14,9 @@
 # BigGAN Deep Learning
 To understand the AI workflow (BigGAN) we will be porting from Satori into MOC's OpenShift, please visit this page [Here](https://github.com/alexandonian/BigGAN-PyTorch) <br>
 
+# Video Demonstration
+Here we will roughly outline the project, challenges, as well as visualized deployment instructions. 
+[Our YouTube video](https://www.youtube.com/watch?v=ar7XRZvGghE&feature=youtu.be).
 
 # Deployment Instructions
 

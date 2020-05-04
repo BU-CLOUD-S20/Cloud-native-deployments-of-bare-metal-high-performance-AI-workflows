@@ -157,8 +157,7 @@ The minimum acceptance criteria is an interface that is able to containerize and
 
 # Sprint Presentations
 
-You find them [Here](Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/doc/Sprint-Presentations-inde.mdx
-)
+You find them [Here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/Sprint-Presentations-inde.mdx)
 
 
 ## Optional Features

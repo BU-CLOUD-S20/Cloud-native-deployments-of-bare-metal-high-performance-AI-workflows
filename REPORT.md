@@ -12,6 +12,7 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 3. [Running on Mass Open Cloud](#Running-on-OpenShift-on-MOC)
 ***
 <h3 align="center"> Environment Specs </h3>
+
 |                  | MIT Satori    | MOC  |
 | :-------------:  |:-------------:| -----:|
 | GPU Architecture | TESLA V100 32GB | TESLA V100 32GB |

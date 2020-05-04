@@ -136,20 +136,15 @@ To move an existing AI workflow to the cloud, you have to ensure that you have a
 
 #### MIT Satori
 
-Cost of electricity $/kWhr
-- 0.0839
-
-PUE (ratio of total power used by the datacenter vs power delivered to the HPC systems)
-- 1.2
-
-Capital (i.e., total amount spent on the hardware)
-- $4.4M
+|                  | MIT Satori    | MOC  |
+| :-------------:  |:-------------:| -----:|
+| Cost of electricity $/kWhr | 0.0839 | 0.0839 |
+| PUE | 1.2      |   1.2 |
+| Capital | $4.4M      |   $3M |
+| Power consumption kW/rack | 25kW     |   25kW |
 
 Number of racks [calculated]
 - 4 + 2 service
-
-Power consumption kW/rack
-- 25KW
 
 Utilization (i.e., percentage of the available cycles that are used)
 - 90%

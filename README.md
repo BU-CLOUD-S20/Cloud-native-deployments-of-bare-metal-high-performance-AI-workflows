@@ -44,7 +44,7 @@ to prepare some data directories and symlinks. Currently, ImageNet is the only s
 `bsub < jobs/make_hdf5.lsf` \
 with the appropriate parameters.
 9. In order to measure sample quality during training, you will need to precompute inception moments for the datset of interest. To do this, run the corresponding lsf script with: \
-`bsub < jobs/calculate_inception_moments.lsf` \
+`bsub < jobs/calculate_inception_moments.lsf`
 10. Now we are ready to submit our first training job, which can be done with any of the `jobs/biggan*` lsf scripts. 
 We use this file **[here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/modified%20job)**.
 11. During training, it's useful to monititor various training metrics, which can be done via a Jupyter Notebook. Go back to the OOD Dashboad window (labeld **My Interactive Sessions**) and go to menu option **Interactive Apps -> Jupyter Notebook**.
@@ -59,16 +59,22 @@ We use this file **[here](https://github.com/BU-CLOUD-S20/Cloud-native-deploymen
 - The goal of The Massachusetts Open Cloud (MOC) OpenShift Service is to deploy and run the OpenShift container service in a production like environment to provide users of the MOC a container service for their projects. They are currently running two environments. The main service is high availability (HA) configured with multi-tenant option. The secondary service is more of a staging area that is currently being used to test configuration of GPU-enabled nodes.
 
 1. Get access to MOC OpenShift [Here](https://p9-openshift.osh.massopen.cloud:8443)
-2. You can choose to build your own image with [buildconfig-gpybiggan](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/feature-gpubiggan/workflows/BigGAN/gpu/buildconfig-gpubiggan.yaml)
-3. Deploy a pod
-   1) Auto-deploy, reuseable: import [deployconfig-gpybiggan.yaml](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/feature-gpubiggan/workflows/BigGAN/gpu/deployconfig-gpubiggan.yaml) to the OpenShift
-   2) Disposable, specific pod: import [pod-biggan.yaml](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/feature-gpubiggan/workflows/BigGAN/gpu/pod-biggan.yaml) to the OpenShift
-   ![import1](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/import-yaml1.png)
-   ![import2](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/import-yaml2.png)
-   Remember to change spec/containers/name for each pod you created
+2. Build new images with [BuildConfig](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/workflows/BigGAN/gpu/openshift/configs/buildconfig-gpubiggan.yaml) we provided.
+   - Remember to modify the name of `BuildConfig` and the output image repository name.
+   - Change the `Dockerfile` source if needed. In our case, we use Github source, and the `Dockerfile` is inside our Github repository. Don't forget changing the branch of repository.
+3. Deploy an image
+   - `Option 1`: Auto-deploy, reuseable: import [DeploymentConfig](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/workflows/BigGAN/gpu/openshift/configs/deployconfig-gpubiggan.yaml) to the OpenShift
+   - `Option 2`: Disposable, specific pod: import [Pod YAML file](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/workflows/BigGAN/gpu/openshift/configs/pod-biggan.yaml) to the OpenShift
+  
+> #### How to import `BuildConfig`, `DeploymentConfig` or `Pod YAML file`
 
-#### Node Specifications
-`list resources here...`
+1. Click `Add to Project` button
+   - ![import1](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/import-yaml1.png)
+2. Click `Import YAML/JSON` button and copy YAML file content into this window.
+   - ![import2](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/import-yaml2.png)
+3. Click `Create`
+
+Remember to change the `DeploymentConfig` name or pod name, and the image you are going to use, you can also set up triggers for `DeploymentConfig`.
 
 # Project Proposal
 

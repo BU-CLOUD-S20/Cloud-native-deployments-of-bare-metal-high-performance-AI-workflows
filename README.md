@@ -19,7 +19,7 @@ To understand the AI workflow (BigGAN) we will be porting from Satori into MOC's
 Here we will roughly outline the project, challenges, as well as visualized deployment instructions. 
 [Our YouTube video](https://www.youtube.com/watch?v=ar7XRZvGghE&feature=youtu.be).
 
-![](Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/ReadMe-image/openshift.png)
+![](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/ReadMe-image/openshift.png)
 
 # Deployment Instructions
 

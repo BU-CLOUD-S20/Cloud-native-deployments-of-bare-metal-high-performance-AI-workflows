@@ -5,6 +5,12 @@ In this project, we take an AI workfow - [BigGAN](https://github.com/BU-CLOUD-S2
 
 The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/README.md#mit-satori). These instructions are our starting point.
 
+
+### Video Demonstration
+Here we will roughly outline the project, challenges, as well as visualized deployment instructions. 
+[Our YouTube video](https://www.youtube.com/watch?v=ar7XRZvGghE&feature=youtu.be).
+
+
 ***
 # Index
 1. [Conclusions](#Conclusions)
@@ -27,10 +33,6 @@ Satori and Mass Open Cloud (MOC)*:
  ```*MOC has 2 cluster available, P-Openshift houses IBM Power 9 nodes and K-Openshift hosts x86 nodes. We work with P-Openshift in this experiment, as these are the same nodes inside the Satori cluster.```
  
 ***
-
-### Video Demonstration
-Here we will roughly outline the project, challenges, as well as visualized deployment instructions. 
-[Our YouTube video](https://www.youtube.com/watch?v=ar7XRZvGghE&feature=youtu.be).
 
 # 1. Conclusions
 

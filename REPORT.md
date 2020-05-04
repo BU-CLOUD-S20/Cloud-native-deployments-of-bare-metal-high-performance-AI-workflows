@@ -80,17 +80,36 @@ In a Kubernetes based environment, you make request to the scheduler, and the sc
 <!-- <h5 align="center"> shawn + jing </h5> -->
 
 - Trouble accessing GPU(s) on MoC
-  * **Solution**: Specify CUDA related environment variables in deployconfig. (worked until Sprint 4)
+  * **Solution**: Specify CUDA related environment variables below in `DeploymentConfig` or `Pod YAML file`. (worked until Sprint 4)
+  ```
+  env:
+        - name: NVIDIA_VISIBLE_DEVICES
+          value: all
+        - name: NVIDIA_DRIVER_CAPABILITIES
+          value: "compute,utility"
+        - name: NVIDIA_REQUIRE_CUDA
+          value: "cuda>=5.0"
+  ```
 - Nvidia cards randomly unavailable
+  * **Description**: Sometimes even if we specified the CUDA related environment variables, we still cannot get the CUDA devices in OpenShift container, it might due to someone else ran out of the GPU resources or some unknown environment issues.
   * **Solution**: None.
   * **Workaround**: Try more times. (worked until Sprint 4)
 - Cannot get enough quota for volume
+  * **Description**: We can only create 10GB RWO volume at first.
   * **Solution**: MoC administrator granted volume to our OpenShift account.
-- Pod creation timeout when mounting volume
+- Pod creation `timeout` or `no route to host` when mounting volume
+  * **Description**: While creating a pod with volume mounted, it can show the two kinds of errors below:
+    - ![](ReadMe-image/pod-volume-timeout.png)
+    - ![](ReadMe-image/pod-volume-noroutetohost.png)
   * **Solution**: Currently still blocked. Requires support from MoC.
   * **Workaround**: Manually copied subset of data and build into our base image to make the workflow runnable.
 - Trouble pushing to internal image registry on OpenShift
   * **Description**: OpenShift reports error when pulling/pushing image to internel image registry. Possibly due to DNS mapping error on MoC. Currently we can not run any pods that uses our image on OpenShift.
+  * **Solution**: Currently still blocked. Requires support from MoC.
+  * **Workaround**: None.
+- Pulling image error
+  * **Description**: While deploying image, it will give the errors below, and the `Pod YAML file` or the `DeploymentConfig` we used are the same as before (they worked before)
+    - ![](ReadMe-image/pod-pull-err.png)
   * **Solution**: Currently still blocked. Requires support from MoC.
   * **Workaround**: None.
 

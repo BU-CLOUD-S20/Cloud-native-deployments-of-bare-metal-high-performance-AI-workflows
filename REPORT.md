@@ -13,9 +13,9 @@ Here we will roughly outline the project, challenges, as well as visualized depl
 
 ***
 # Index
-1. [Conclusions](#Conclusions)
-2. [Running On Satori](#Running-on-Satori)
-3. [Running on Mass Open Cloud](#Running-on-OpenShift-on-MOC)
+1. [Conclusions](#1-conclusions)
+2. [Running On Satori](#2-Running-on-Satori)
+3. [Running on Mass Open Cloud](#3-Running-on-OpenShift-on-MOC)
 ***
 ### Environment Specs 
 

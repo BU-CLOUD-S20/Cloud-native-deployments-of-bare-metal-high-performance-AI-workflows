@@ -170,18 +170,10 @@ The GPU is around 40% utilized. This might be because that the GPU is not used b
 ![openshift gpu usage](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/imgs/os-gpu.png)
 
 
-Satori: 
-- 64 1TB memory Power 9 nodes
+Satori and Mass Open Cloud (MOC)*: 
+- 64 1TB memory IBM Power 9 nodes
 - Each node hosts 4 NVidia V100 32GB memory GPU cards
 - Within a node, GPUs are linked by an NVLink2 network that supports nearly to 200GB/s bi-directional transfer between GPUs
 - A 100Gb/s Infiniband network with microsecond user space latency connects the cluster nodes togehter
 
-OpenShift
-- Red Hat Enterprise Linux 7.5, CentOS PostgreSQL 10 image
-<!-- Are we sure this is running on AWS? That seems odd -->
-<!-- - OpenShift Container Platform 3.10 Cluster running on AWS -->
-- Container Runtime: crio-1.10.5 or docker-1.13.1
-- Container Tools: podman-0.6.1, buildah-1.1, skopeo-0.1.30
-- Master node: m4.xlarge
-- Infra node: m4.xlarge
-- Compute node: p3.2xlarge (One NVIDIA Tesla V100 GPU, 8vCPUs and 61GB RAM)
+*MOC has 2 cluster available, P-Openshift houses IBM Power 9 nodes and K-Openshift hosts x86 nodes. We work with P-Openshift in this experiment, as these are the same nodes inside the Satori cluster.

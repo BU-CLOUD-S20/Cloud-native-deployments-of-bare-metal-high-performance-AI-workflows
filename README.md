@@ -71,10 +71,12 @@ We use this file **[here](https://github.com/BU-CLOUD-S20/Cloud-native-deploymen
 
 1. Click `Add to Project` button
 
-   - ![import1](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/import-yaml1.png)
+![import1](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/import-yaml1.png)
+
 2. Click `Import YAML/JSON` button and copy YAML file content into this window.
 
-   - ![import2](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/import-yaml2.png)
+![import2](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/update-readme/ReadMe-image/import-yaml2.png)
+
 3. Click `Create`
 
 Remember to change the `DeploymentConfig` name or pod name, and the image you are going to use, you can also set up triggers for `DeploymentConfig`.

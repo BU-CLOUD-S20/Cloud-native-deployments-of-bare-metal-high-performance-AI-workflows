@@ -134,7 +134,7 @@ To move an existing AI workflow to the cloud, you have to ensure that you have a
 
 ### 3.4 Cost Analysis
 
-#### MIT Satori
+Below we offer a rough cost analysis comparing MOC (a cloud native environment) to that of MIT's HPC cluster, Satori (a bare metal environment). This may further serve to inform an end-user, or an admin of either of these systems when attempting to transition a workflow from one environment to another. For example, as seen in the chart below, user support in the MOC is lower than that of Satori and this might be pertinent when requesting support. Users may derive similar useful information from the metrics listed below.
 
 |                  | MIT Satori    | MOC  |
 | :-------------:  |:-------------:| -----:|
@@ -142,48 +142,14 @@ To move an existing AI workflow to the cloud, you have to ensure that you have a
 | PUE | 1.2      |   1.2 |
 | Capital | $4.4M      |   $3M |
 | Power consumption kW/rack | 25kW     |   25kW |
-
-Number of racks [calculated]
-- 4 + 2 service
-
-Utilization (i.e., percentage of the available cycles that are used)
-- 90%
-
-Service time (i.e., percentage of time that the system is available to users)
-- 95%
-
-Total number of core-hrs user per year [calculated]
-- 40M CPU core hours, 2.1M GPU card hours
-
-Cost of a person per year
-- $140K
-
-Price per node
-- $50K
-
-Nodes per rack
-- 16
-
-Price per rack [calculated]
-- $1M
-
-Cores per node
-- 80
-
-Cost of hosting per rack per year
-- $3.3K/year
-
-Effort spent on procurement & commissioning (person years)
-- 0.1
-
-Effort spent on decommissioning (person years)
-- 0.1
-
-System management team (number of persons or 'FTE')
-- 0.25
-
-User support team (number of persons or 'FTE')
-- 0.25
+| Person Cost/Year | $140K     |  $125k |
+| User support team (FTE) | 0.25     |   0 |
+| System management team (FTE) | 0.25     |   0.5 |
+| Cost of hosting per rack/year | $3.3k     |   $3.3k |
+| Price per rack | $1M     |   $1M |
+| Price per node | $50K    |   $50K |
+| Cores per node | 80    |   80 |
+| Utilization | 90%    | 60%    |
 
 
 ## 4. Lessons Learned

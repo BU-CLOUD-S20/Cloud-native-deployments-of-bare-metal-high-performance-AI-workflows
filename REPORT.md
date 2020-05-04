@@ -24,7 +24,7 @@ Satori and Mass Open Cloud (MOC)*:
 - Within a node, GPUs are linked by an NVLink2 network that supports nearly to 200GB/s bi-directional transfer between GPUs
 - A 100Gb/s Infiniband network with microsecond user space latency connects the cluster nodes togehter
 
- *MOC has 2 cluster available, P-Openshift houses IBM Power 9 nodes and K-Openshift hosts x86 nodes. We work with P-Openshift in this experiment, as these are the same nodes inside the Satori cluster.
+ ```MOC has 2 cluster available, P-Openshift houses IBM Power 9 nodes and K-Openshift hosts x86 nodes. We work with P-Openshift in this experiment, as these are the same nodes inside the Satori cluster.```
 
 # 1. Conclusions
 

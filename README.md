@@ -1,5 +1,5 @@
 
-<h1 align="center"> Project Atlas </h1> 
+<h1 align="center"> Proje Atlas </h1> 
 
 <h2 align="center"> Cloud Native Deployments of Bare-Metal High-Performance AI Workflows Proposal </h2> 
 

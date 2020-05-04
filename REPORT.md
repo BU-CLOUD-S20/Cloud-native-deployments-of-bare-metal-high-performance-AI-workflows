@@ -11,7 +11,7 @@ Here we will roughly outline the project, challenges, as well as visualized depl
 [Our YouTube video](https://www.youtube.com/watch?v=ar7XRZvGghE&feature=youtu.be).
 
 ![](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/ReadMe-image/openshift.png)
-
+***
 # Index
 1. [Conclusions](#1-conclusions)
 2. [Running On Satori](#2-Running-on-Satori)

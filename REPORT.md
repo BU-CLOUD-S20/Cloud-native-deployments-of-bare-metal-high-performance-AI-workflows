@@ -10,7 +10,7 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 1. [Conclusions](#Conclusions)
 2. [Running On Satori](#Running-on-Satori)
 3. [Running on Mass Open Cloud](#Running-on-OpenShift-on-MOC)
-
+***
 ### Environment Specs
 |                  | MIT Satori    | MOC  |
 | :-------------:  |:-------------:| -----:|

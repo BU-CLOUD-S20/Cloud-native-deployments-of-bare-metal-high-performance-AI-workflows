@@ -134,6 +134,63 @@ To move an existing AI workflow to the cloud, you have to ensure that you have a
 
 ### 3.4 Cost Analysis
 
+#### MIT Satori
+
+Cost of electricity $/kWhr
+- 0.0839
+
+PUE (ratio of total power used by the datacenter vs power delivered to the HPC systems)
+- 1.2
+
+Capital (i.e., total amount spent on the hardware)
+- $4.4M
+
+Number of racks [calculated]
+- 4 + 2 service
+
+Power consumption kW/rack
+- 25KW
+
+Utilization (i.e., percentage of the available cycles that are used)
+- 90%
+
+Service time (i.e., percentage of time that the system is available to users)
+- 95%
+
+Total number of core-hrs user per year [calculated]
+- 40M CPU core hours, 2.1M GPU card hours
+
+Cost of a person per year
+- $140K
+
+Price per node
+- $50K
+
+Nodes per rack
+- 16
+
+Price per rack [calculated]
+- $1M
+
+Cores per node
+- 80
+
+Cost of hosting per rack per year
+- $3.3K/year
+
+Effort spent on procurement & commissioning (person years)
+- 0.1
+
+Effort spent on decommissioning (person years)
+- 0.1
+
+System management team (number of persons or 'FTE')
+- 0.25
+
+User support team (number of persons or 'FTE')
+- 0.25
+
+
 ## 4. Lessons Learned
 1. We should ask for mentors' help as soon as possible instead of trying debugging the issue by ourselves so that we may not stuck into one problem for a long time.
 2. We should make an alternative plan to make sure what we can at least achieve before each sprint started (based on Covid-19 situation), so we can handle the situation which may delay our progress.

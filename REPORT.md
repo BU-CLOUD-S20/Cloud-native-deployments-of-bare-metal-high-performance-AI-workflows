@@ -32,8 +32,6 @@ Satori and Mass Open Cloud (MOC)*:
 
  ```*MOC has 2 cluster available, P-Openshift houses IBM Power 9 nodes and K-Openshift hosts x86 nodes. We work with P-Openshift in this experiment, as these are the same nodes inside the Satori cluster.```
  
-***
-
 # 1. Conclusions
 
 <!-- ### 1. Efficiency 

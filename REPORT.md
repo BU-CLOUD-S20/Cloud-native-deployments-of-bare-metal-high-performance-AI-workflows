@@ -16,6 +16,14 @@ The instructions to run BigGAN on Satori are [here](https://github.com/BU-CLOUD-
 | GPU Architecture | TESLA V100 32GB | TESLA V100 32GB |
 | CPU Architecture | IBM Power9      |   IBM Power9 |
 
+Satori and Mass Open Cloud (MOC)*: 
+- 64 1TB memory IBM Power 9 nodes
+- Each node hosts 4 NVidia V100 32GB memory GPU cards
+- Within a node, GPUs are linked by an NVLink2 network that supports nearly to 200GB/s bi-directional transfer between GPUs
+- A 100Gb/s Infiniband network with microsecond user space latency connects the cluster nodes togehter
+
+*MOC has 2 cluster available, P-Openshift houses IBM Power 9 nodes and K-Openshift hosts x86 nodes. We work with P-Openshift in this experiment, as these are the same nodes inside the Satori cluster.
+
 # 1. Conclusions
 
 <!-- ### 1. Efficiency 
@@ -169,11 +177,3 @@ The GPU is around 40% utilized. This might be because that the GPU is not used b
 
 ![openshift gpu usage](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/doc/imgs/os-gpu.png)
 
-
-Satori and Mass Open Cloud (MOC)*: 
-- 64 1TB memory IBM Power 9 nodes
-- Each node hosts 4 NVidia V100 32GB memory GPU cards
-- Within a node, GPUs are linked by an NVLink2 network that supports nearly to 200GB/s bi-directional transfer between GPUs
-- A 100Gb/s Infiniband network with microsecond user space latency connects the cluster nodes togehter
-
-*MOC has 2 cluster available, P-Openshift houses IBM Power 9 nodes and K-Openshift hosts x86 nodes. We work with P-Openshift in this experiment, as these are the same nodes inside the Satori cluster.

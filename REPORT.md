@@ -25,6 +25,12 @@ Satori and Mass Open Cloud (MOC)*:
 - A 100Gb/s Infiniband network with microsecond user space latency connects the cluster nodes togehter
 
  ```*MOC has 2 cluster available, P-Openshift houses IBM Power 9 nodes and K-Openshift hosts x86 nodes. We work with P-Openshift in this experiment, as these are the same nodes inside the Satori cluster.```
+ 
+***
+
+### Video Demonstration
+Here we will roughly outline the project, challenges, as well as visualized deployment instructions. 
+[Our YouTube video](https://www.youtube.com/watch?v=ar7XRZvGghE&feature=youtu.be).
 
 # 1. Conclusions
 
@@ -134,7 +140,7 @@ To move an existing AI workflow to the cloud, you have to ensure that you have a
 
 ### 3.4 Cost Analysis
 
-Below we offer a rough cost analysis comparing MOC (a cloud native environment) to that of MIT's HPC cluster, Satori (a bare metal environment). This may further serve to inform an end-user, or an admin of either of these systems when attempting to transition a workflow from one environment to another. For example, as seen in the chart below, user support in the MOC is lower than that of Satori and this might be pertinent when requesting support. Users may derive similar useful information from the metrics listed below.
+Below we offer a rough cost analysis comparing `MOC` (a cloud native environment) to that of MIT's HPC cluster, `Satori` (a bare metal environment). This may further serve to inform an end-user, or an admin of either of these systems when attempting to transition a workflow from one environment to another. For example, as seen in the chart below, user support in the MOC is lower than that of Satori and this might be pertinent when requesting support. Users may derive similar useful information from the metrics listed below.
 
 |                  | MIT Satori    | MOC  |
 | :-------------:  |:-------------:| -----:|

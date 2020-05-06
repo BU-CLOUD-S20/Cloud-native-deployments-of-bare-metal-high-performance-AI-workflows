@@ -138,7 +138,7 @@ To move an existing AI workflow to the cloud, you have to ensure that you have a
   * **Solution**: Currently still blocked. Requires support from MoC.
   * **Workaround**: None.
 
-### 3.4 Cost Analysis
+### 3.5 Cost Analysis
 
 Below we offer a rough cost analysis comparing `MOC` (a cloud native environment) to that of MIT's HPC cluster, `Satori` (a bare metal environment). This may further serve to inform an end-user, or an admin of either of these systems when attempting to transition a workflow from one environment to another. For example, as seen in the chart below, user support in the MOC is lower than that of Satori and this might be pertinent when requesting support. Users may derive similar useful information from the metrics listed below.
 

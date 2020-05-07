@@ -3,7 +3,7 @@
 
 <p align="center">
    
- <a href="https://github.com/jin-qin"> Forgot password?</a>
+ <a href="https://github.com/jin-qin" align = "center"> Forgot password?</a>
    
 [jin-qin](https://github.com/jin-qin) | [atlascu](https://github.com/atlascu) | [CarlZuo](https://github.com/CarlZuo) | [shawn3298317](https://github.com/shawn3298317) | [arorashu](https://github.com/arorashu) </p>
 

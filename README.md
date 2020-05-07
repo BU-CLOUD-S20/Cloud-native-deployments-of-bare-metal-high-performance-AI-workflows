@@ -1,5 +1,6 @@
 <h1 align="center"> Cloud Native Deployments of Bare-Metal High-Performance AI Workflows Proposal </h1> 
 <h3 align="center"> Built in collaboration with MIT, MOC, and BU  </h3> 
+
 ***
 
 # Index
@@ -88,7 +89,17 @@ Remember to change the `DeploymentConfig` name or pod name, and the image you ar
 ***
 # Modification Synopsis to get BigGAN from Satori to OpenShift
 
+### Base Image Update
+
+### dockerfile
+
+### LSF Jobs
+
+### OpenShift Environment Variables
+
+
 ***
+
 # Project Proposal
 
 ## 1.   Vision and Goals Of The Project:

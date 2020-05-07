@@ -21,6 +21,16 @@ Here we will roughly outline the project, challenges, as well as visualized depl
 
 ![](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/ReadMe-image/openshift.png)
 
+# Summary to get BigGAN from Satori to OpenShift
+
+### Base Image Update
+
+### dockerfile
+
+### LSF Jobs
+
+### OpenShift Environment Variables
+
 # Deployment Instructions
 
 ### Clone the project
@@ -86,17 +96,6 @@ We use this file **[here](https://github.com/BU-CLOUD-S20/Cloud-native-deploymen
 3. Click `Create`
 
 Remember to change the `DeploymentConfig` name or pod name, and the image you are going to use, you can also set up triggers for `DeploymentConfig`.
-***
-# Modification Synopsis to get BigGAN from Satori to OpenShift
-
-### Base Image Update
-
-### dockerfile
-
-### LSF Jobs
-
-### OpenShift Environment Variables
-
 
 ***
 

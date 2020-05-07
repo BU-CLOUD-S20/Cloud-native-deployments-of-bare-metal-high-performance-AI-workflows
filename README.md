@@ -1,7 +1,4 @@
-
-<h1 align="center"> Project Atlas </h1> 
-
-<h2 align="center"> Cloud Native Deployments of Bare-Metal High-Performance AI Workflows Proposal </h2> 
+<h1 align="center"> Cloud Native Deployments of Bare-Metal High-Performance AI Workflows Proposal </h1> 
 
 # Index
 
@@ -86,12 +83,15 @@ We use this file **[here](https://github.com/BU-CLOUD-S20/Cloud-native-deploymen
 3. Click `Create`
 
 Remember to change the `DeploymentConfig` name or pod name, and the image you are going to use, you can also set up triggers for `DeploymentConfig`.
+***
+# Modification Synopsis to get BigGAN from Satori to OpenShift
 
+***
 # Project Proposal
 
 ## 1.   Vision and Goals Of The Project:
 
-Atlas will serve as a bridge from existing bare-metal HPC clusters (example: Satori@MIT) to a native cloud environment for better resource utilization and price-efficiency. High-level goals of Atlas includes:
+Our project will serve as a bridge from existing bare-metal HPC clusters (example: Satori@MIT) to a native cloud environment for better resource utilization and price-efficiency. High-level goals include:
 - Survey existing MIT bare-metal workloads and containerize one of them.
 - Monitor and compare OpenShift workflows and bare-metal workflows.
 - Generate a report that portrays the pros/cons of migrating bare-metal workflow to OpenShift environment.

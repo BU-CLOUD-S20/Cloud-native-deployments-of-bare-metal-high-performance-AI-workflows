@@ -1,8 +1,6 @@
 <h1 align="center"> Cloud Native Deployments of Bare-Metal AI Workflows  </h1> 
 <h3 align="center"> Built in collaboration with MIT, MOC, Red Hat, and BU </h3> 
 
-Developers: [jin-qin](https://github.com/jin-qin) | [atlascu](https://github.com/atlascu) | [CarlZuo](https://github.com/CarlZuo) | [shawn3298317](https://github.com/shawn3298317) | [arorashu](https://github.com/arorashu) Mentors: 
-
 ***
 
 # Index

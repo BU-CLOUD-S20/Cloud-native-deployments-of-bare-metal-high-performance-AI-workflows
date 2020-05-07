@@ -13,8 +13,12 @@
 5. [Sprint Presentations](#sprint-presentations)
 6. [Project Report](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/REPORT.md)
 
+***
+
 # BigGAN Deep Learning
-To understand the AI workflow (BigGAN) we will be porting from Satori into MOC's OpenShift, please visit this page [Here](https://github.com/alexandonian/BigGAN-PyTorch) <br>
+To understand the AI workflow (BigGAN) we will be porting from Satori into MOC's OpenShift, please visit this page [Here](https://github.com/alexandonian/BigGAN-PyTorch). <br>
+
+***
 
 # Video Demonstration
 Here we will roughly outline the project, challenges, as well as visualized deployment instructions. 
@@ -37,30 +41,11 @@ Because this is newfound territory and is cutting-edge at the moment, users atte
 - If you do have sufficient volume mounted, then you can specify the additional packages your environment will need:
    - In our case we needed `git` to clone our GitHub repo (and BigGAN), `sar` to monitor system processes, and `sysbench` to further monitor performance of our workflow.
 
-### Dockerfile
-The [Dockerfile](workflows/BigGAN/gpu/openshift/Dockerfile
-) is for OpenShift `BuildConfig` to build new images from our base image, we provided this Dockerfile for the following reasons:
-1. Once users push new codes to their Github repositories, they can simply trigger `BuildConfig` to build new images with new codes included.
-2. Since OpenShift uses a default user id while running a container from the image we built, and that user ID **DO NOT** has a matched user name, which incurs the Anaconda environment cannot work since to initialize and activate the Anaconda envrionment needs a user name. We put some hack codes (provided by OpenSfhit) in [entrypoint.sh](workflows/BigGAN/gpu/openshift/scripts/entrypoint.sh) to assign a user name to this default user ID, we do not want to hardcode it inside the image since this user ID may change in the future, even though currently OpenShift gives this ID with a fixed value.
-3. Clone the our workflow codes from the Github repository in Dockerfile, we do not want to hardcode it since the codes may change frequently in the future.
-4. Set up the work directory since the default work directory is `/` (system root directory).
+### 2. dockerfile
 
-### LSF Jobs
+### 3. LSF Jobs
 
-
-### OpenShift Environment Variables
-To enable NVIDIA CUDA devices available in the OpenShift container, we need to set up the following environment variables while running the container:
-```
-env:
-   - name: NVIDIA_VISIBLE_DEVICES
-      value: all
-   - name: NVIDIA_DRIVER_CAPABILITIES
-      value: "compute,utility"
-   - name: NVIDIA_REQUIRE_CUDA
-      value: "cuda>=5.0"
-```
-
-> **Note**: we put this in the `Pod YAML file` or `DeploymentConfig`.
+### 4. OpenShift Environment Variables
 
 ***
 
@@ -205,6 +190,7 @@ The minimum acceptance criteria is an interface that is able to containerize and
 - Interface to include detailed comparison between bare-metal env. & cloud-native implementations of parallel ML workflows.
 - Display under-utilized nodes in OpenShift and perhaps suggestions/actual effectuations of running backfill overloads.
 
+***
 
 # Sprint Presentations
 

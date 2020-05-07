@@ -1,5 +1,5 @@
 <h1 align="center"> Cloud Native Deployments of Bare-Metal AI Workflows  </h1> 
-<h4 align="center"> Built in collaboration with MIT, MOC, Red Hat and BU </h4> 
+<h3 align="center"> Built in collaboration with MIT, MOC, Red Hat and BU </h3> 
 
 ***
 
@@ -32,7 +32,7 @@ Here we will outline a general summary of changes we had to make in order to get
 Because this is newfound territory and is cutting-edge at the moment, users attempting such a transition might find themselves with other, unmentioned difficulties, but these will serve as a general guide/solution.
 
 ### 1. Base Image Update
-> **Note:** we are building our base image on top of IBM's `PowerAI` base image using interactive mode. This can be done on any POWER9 machine that is running docker.*
+> **Note:** we are building our base image on top of IBM's `PowerAI` base image using interactive mode. This can be done on any POWER9 machine that is running docker.
 
 - If you do not have a volume mounted on OpenShift, you will have to copy data into the container:
    - In our case, we copied a subset of the Imagenet data `tmpdata` in our base image (that we pull from dockerhub [here](https://hub.docker.com/layers/atlas4openshift/powerai/tmpdata/images/sha256-2d2c4fe91a53e353e9ba41d8506d6bebbde8bcfc2c6d299ade9b85f09c10a174?context=explore)).

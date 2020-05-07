@@ -7,7 +7,7 @@
 
 1. [BigGan Deep Learning](#biggan-deep-learning)
 2. [Video Demonstration](#video-demonstration)
-3. [Summary to get BigGAN from Satori to OpenShift] (#Summary-to-get-BigGAN-from-Satori-to-OpenShift)
+3. [Summary to get BigGAN from Satori to OpenShift] (#summary-to-get-biggan-from-satori-to-openshift)
 3. [Deployment Instructions](#deployment-instructions)
 4. [Project Proposal](#project-proposal)
 5. [Sprint Presentations](#sprint-presentations)
@@ -22,15 +22,20 @@ Here we will roughly outline the project, challenges, as well as visualized depl
 
 ![](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/ReadMe-image/openshift.png)
 
-# Summary to get BigGAN from Satori to OpenShift
+# Summary to get BigGAN from Satori (HPC) to OpenShift (Cloud)
+Here we will outline a general summary of the *cardinal* changes we had to make in order to get our AI workflow, BigGAN, from MIT's Satori into the MOC (that is bootstrapping OpenShift). This can easily be extendable to many applications so that an application running in an HPC environment could be brought to a cloud native environment in a more facilitaed fashion. Because this is newfound territory and is cutting-edge at the moment, users attempting such a transition might find themselves with other, unmentioned difficulties, but these will serve as a general guide/solution.
 
-### Base Image Update
+### 1. Base Image Update
+- copy tmp data/subset of data (imagenet) into container (cannot mount volume in env) -- workaround
+- install git, etc.
 
-### dockerfile
+### 2. dockerfile
 
-### LSF Jobs
+### 3. LSF Jobs
 
-### OpenShift Environment Variables
+### 4. OpenShift Environment Variables
+
+***
 
 # Deployment Instructions
 

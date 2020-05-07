@@ -48,6 +48,28 @@ The [Dockerfile](workflows/BigGAN/gpu/openshift/Dockerfile
 4. Set up the work directory since the default work directory is `/` (system root directory).
 
 ### 3. LSF Jobs
+Here we will be discussing how to convert LSF jobs from Satori into similiar commands on the OpenShift platform.
+
+This is a short snippet of how one of these jobs looks like (in this example we used the`biggan128_imagenet.lsf` found [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/workflows/BigGAN/gpu/satori/scripts/biggan128_imagenet.lsf).
+```
+#BSUB -L /bin/bash
+#BSUB -J "BigGAN128-ImageNet"
+#BSUB -o "BigGAN128-ImageNet.%J"
+#BSUB -e "BigGAN128-ImageNet.%J.err"
+#BSUB -n 4
+#BSUB -R "span[ptile=1]"
+#BSUB -gpu "num=2"
+#BSUB -q "normal"
+
+# Setup User Environement (Python, WMLCE virtual environment etc)
+HOME2=/nobackup/users/$(whoami)
+PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
+CONDA_ROOT=$HOME2/anaconda3
+
+DATA_ROOT=data
+DATASET=ImageNet
+RESOLUTION=128
+```
 
 
 ### 4. OpenShift Environment Variables

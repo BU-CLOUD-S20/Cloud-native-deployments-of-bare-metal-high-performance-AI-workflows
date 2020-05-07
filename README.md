@@ -50,7 +50,7 @@ The [Dockerfile](workflows/BigGAN/gpu/openshift/Dockerfile
 ### 3. LSF Jobs
 Here we will be discussing how to convert LSF jobs from Satori into similiar commands on the OpenShift platform.
 
-This is a short snippet of how one of these jobs looks like (in this example we used the`biggan128_imagenet.lsf` found [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/workflows/BigGAN/gpu/satori/scripts/biggan128_imagenet.lsf).
+This is a short snippet of how one of these jobs looks like (in this example we used the`biggan128_imagenet.lsf` found [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/workflows/BigGAN/gpu/satori/scripts/biggan128_imagenet.lsf)).
 ```
 #BSUB -L /bin/bash
 #BSUB -J "BigGAN128-ImageNet"

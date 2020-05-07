@@ -28,8 +28,13 @@ Here we will outline a general summary of changes we had to make in order to get
 Because this is newfound territory and is cutting-edge at the moment, users attempting such a transition might find themselves with other, unmentioned difficulties, but these will serve as a general guide/solution.
 
 ### 1. Base Image Update
+*note: we are building building our base image on top of IBM's `PowerAI` base image.
+
+- If you do not have a volume mounted on OpenShift, you will have to copy data into the container:
+   - In our case, we copied a subset of the Imagenet data `tmpdata` in our base image (that we pull from dockerhub [here](https://hub.docker.com/layers/atlas4openshift/powerai/tmpdata/images/sha256-2d2c4fe91a53e353e9ba41d8506d6bebbde8bcfc2c6d299ade9b85f09c10a174?context=explore)
+- If you do have sufficient volume mounted, then you can 
 - copy tmp data/subset of data (imagenet) into container (cannot mount volume in env) -- workaround
-- install git, etc.
+- install git, sar, etc.
 
 ### 2. dockerfile
 

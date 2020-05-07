@@ -1,6 +1,6 @@
 <h1 align="center"> Cloud Native Deployments of Bare-Metal AI Workflows  </h1> 
 <h3 align="center"> Built in collaboration with MIT, MOC, Red Hat, and BU </h3> 
-
+[jin-qin](https://github.com/jin-qin) | [atlascu](https://github.com/atlascu) | [CarlZuo](https://github.com/CarlZuo) | [shawn3298317](https://github.com/shawn3298317) | [arorashu](https://github.com/arorashu)
 ***
 
 # Index
@@ -259,10 +259,3 @@ You find them [Here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of
     - Circumventing workflow tied to a current system.
 - Generalized: orientation is mostly towards high-performance AI workflows, but should have the capability to deploy a wide range of projects. 
 - Generalize from supporting a specific workflow to supporting a wide range of bare-metal AI workflows that uses different machine learning frameworks.
-
-# Developers
-
-<p style="text-align:center">
-    <a href="http//www.google.com">Search</a> 
-    <a href="Contact Us">Contact Us</a>
-</p>

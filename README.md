@@ -7,6 +7,7 @@
 
 1. [BigGan Deep Learning](#biggan-deep-learning)
 2. [Video Demonstration](#video-demonstration)
+3. [Summary to get BigGAN from Satori to OpenShift] (#Summary-to-get-BigGAN-from-Satori-to-OpenShift)
 3. [Deployment Instructions](#deployment-instructions)
 4. [Project Proposal](#project-proposal)
 5. [Sprint Presentations](#sprint-presentations)

@@ -1,5 +1,5 @@
 <h1 align="center"> Cloud Native Deployments of Bare-Metal High-Performance AI Workflows Proposal </h1> 
-<h3 align="center"> Built in collaboration with MIT, MOC, and BU  </h3> 
+<h3 align="center"> Built in collaboration with MIT, MOC, Red Hat and BU </h3> 
 
 ***
 

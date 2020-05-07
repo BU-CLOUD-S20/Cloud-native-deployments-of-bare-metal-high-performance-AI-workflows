@@ -7,7 +7,7 @@
 
 1. [BigGan Deep Learning](#biggan-deep-learning)
 2. [Video Demonstration](#video-demonstration)
-3. [Summary to get BigGAN from Satori to OpenShift] (#summary-to-get-biggan-from-satori-to-openshift)
+3. [Summary to get BigGAN from Satori to OpenShift] (https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/README.md#summary-to-get-biggan-from-an-hpc-to-the-cloud)
 3. [Deployment Instructions](#deployment-instructions)
 4. [Project Proposal](#project-proposal)
 5. [Sprint Presentations](#sprint-presentations)

@@ -7,14 +7,46 @@
 
 1. [BigGan Deep Learning](#biggan-deep-learning)
 2. [Video Demonstration](#video-demonstration)
-3. [HPC to Cloud](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/README.md#summary-to-get-biggan-from-an-hpc-to-the-cloud)
-3. [Deployment Instructions](#deployment-instructions)
-4. [Project Proposal](#project-proposal)
-5. [Sprint Presentations](#sprint-presentations)
-6. [Project Report](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/REPORT.md)
+3. [Code Directory Tree](#code-directory-tree)
+4. [HPC to Cloud](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/README.md#summary-to-get-biggan-from-an-hpc-to-the-cloud)
+5. [Deployment Instructions](#deployment-instructions)
+6. [Project Proposal](#project-proposal)
+7. [Sprint Presentations](#sprint-presentations)
+8. [Project Report](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/REPORT.md)
 
 # BigGAN Deep Learning
 To understand the AI workflow (BigGAN) we will be porting from Satori into MOC's OpenShift, please visit this page [here](https://github.com/alexandonian/BigGAN-PyTorch). <br>
+
+# Code Directory Tree
+
+```
+workflows/
+└── BigGAN
+    ├── README.md
+    ├── cpu # Running cpu-only workflow on Openshift
+    │   ├── Dockerfile
+    │   ├── requirements.txt
+    │   └── run.sh
+    └── gpu # Running gpu workflow on Openshift & Satori
+        ├── openshift # Openshift-related scripts and configs
+        │   ├── Dockerfile
+        │   ├── configs
+        │   │   ├── buildconfig-gpubiggan.yaml
+        │   │   ├── deployconfig-gpubiggan.yaml
+        │   │   └── pod-biggan.yaml
+        │   └── scripts
+        │       ├── calc_inception_moments.sh
+        │       ├── entrypoint.sh
+        │       ├── make_hdf5.sh
+        │       ├── run.sh
+        │       ├── run_biggan128_imagenet.sh
+        │       └── sysbench-cpu-load.sh
+        └── satori # HPC-related scripts and configs
+            └── scripts
+                ├── biggan128_imagenet.lsf
+                ├── calculate_inception_moments.lsf
+                └── make_hdf5.lsf
+```
 
 ***
 

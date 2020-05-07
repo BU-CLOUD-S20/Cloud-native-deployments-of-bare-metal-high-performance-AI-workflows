@@ -47,7 +47,7 @@ The [Dockerfile](workflows/BigGAN/gpu/openshift/Dockerfile
 3. Clone our workflow code from the GitHub repository in our Dockerfile -- we do not want to hardcode it since code may change frequently in the future.
 4. Set up the work directory since the default work directory is `/` (system root directory).
 
-### 3. LSF Jobs
+### 3. Convert LSF Jobs to bash scripts on OpenShift
 Here we will be discussing how to convert LSF jobs from Satori into similiar commands on the OpenShift platform.
 
 This is a short snippet of how one of these jobs looks like (in this example we used the`biggan128_imagenet.lsf` found [here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/workflows/BigGAN/gpu/satori/scripts/biggan128_imagenet.lsf)).
@@ -70,6 +70,11 @@ DATA_ROOT=data
 DATASET=ImageNet
 RESOLUTION=128
 ```
+
+Since LSF jobs are the bash scripts for running AI workflows on Satori, but some codes are optimized for Satori. Therefore, to run the AI workflow on OpenShift, we need to modify these LSF jobs to bash scripts, here are things we did:
+1. `mpirun` currently cannot work on OpenShift, we simply remove this command
+2. Disable distributed mode for BigGAN since for this short term project, we are not able to make it run in distributed mode on OpenShift.
+3. Change the environment variables to match the environment on the images built by OpenShift.
 
 
 ### 4. OpenShift Environment Variables

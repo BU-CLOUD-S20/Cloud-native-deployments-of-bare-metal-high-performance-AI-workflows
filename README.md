@@ -262,5 +262,7 @@ You find them [Here](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of
 
 # Developers
 
-<h3 align="center"> Built in collaboration with MIT, MOC, Red Hat, and BU </h3> 
-<a href="http//www.google.com" style="text-align:center">Search</a>
+<p style="text-align:center">
+    <a href="http//www.google.com">Search</a> 
+    <a href="Contact Us">Contact Us</a>
+</p>

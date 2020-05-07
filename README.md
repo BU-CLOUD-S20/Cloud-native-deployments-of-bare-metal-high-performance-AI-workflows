@@ -12,7 +12,6 @@
 4. [Project Proposal](#project-proposal)
 5. [Sprint Presentations](#sprint-presentations)
 6. [Project Report](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/REPORT.md)
-7. [Team Info](#team-info)
 
 # BigGAN Deep Learning
 To understand the AI workflow (BigGAN) we will be porting from Satori into MOC's OpenShift, please visit this page [here](https://github.com/alexandonian/BigGAN-PyTorch). <br>

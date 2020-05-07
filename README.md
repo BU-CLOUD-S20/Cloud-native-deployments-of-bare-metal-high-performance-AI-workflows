@@ -22,6 +22,8 @@ Here we will roughly outline the project, challenges, as well as visualized depl
 
 ![](https://github.com/BU-CLOUD-S20/Cloud-native-deployments-of-bare-metal-high-performance-AI-workflows/blob/master/ReadMe-image/openshift.png)
 
+***
+
 # Summary to get BigGAN from an HPC to the Cloud
 Here we will outline a general summary of changes we had to make in order to get our AI workflow, BigGAN, from MIT's Satori into the MOC (that is bootstrapping OpenShift). This can be extendable to many applications so that an application running in an HPC environment could be brought to a cloud native environment in a more facilitaed fashion. 
 

@@ -41,10 +41,10 @@ Because this is newfound territory and is cutting-edge at the moment, users atte
 
 ### 2. Dockerfile
 The [Dockerfile](workflows/BigGAN/gpu/openshift/Dockerfile
-) is for OpenShift `BuildConfig` to build new images from our base image, we provided this Dockerfile for the following reasons:
-1. Once users push new codes to their Github repositories, they can simply trigger `BuildConfig` to build new images with new codes included.
-2. Since OpenShift uses a default user id while running a container from the image we built, and that user ID **DO NOT** has a matched user name, which incurs the Anaconda environment cannot work since to initialize and activate the Anaconda envrionment needs a user name. We put some hack codes (provided by OpenSfhit) in [entrypoint.sh](workflows/BigGAN/gpu/openshift/scripts/entrypoint.sh) to assign a user name to this default user ID, we do not want to hardcode it inside the image since this user ID may change in the future, even though currently OpenShift gives this ID with a fixed value.
-3. Clone the our workflow codes from the Github repository in Dockerfile, we do not want to hardcode it since the codes may change frequently in the future.
+) is for OpenShift's `BuildConfig` to build new images from our base image. We provided this Dockerfile for the following reasons:
+1. Once users push new codes to their GitHub repositories, they can simply trigger `BuildConfig` to build new images with new codes updates.
+2. Since OpenShift uses a default user id while running a container from the image we built, and that user ID **DOES NOT** have a matched user name -- the Anaconda environment cannot work since to initialize and activate the Anaconda envrionment, there needs to be a user name. We used some 'hack' code (provided by OpenShift) in [entrypoint.sh](workflows/BigGAN/gpu/openshift/scripts/entrypoint.sh) to assign a user name to this default user ID. We do not want to hardcode it inside the image since this user ID may change in the future, even though currently OpenShift gives this ID with a fixed value.
+3. Clone our workflow code from the GitHub repository in our Dockerfile -- we do not want to hardcode it since code may change frequently in the future.
 4. Set up the work directory since the default work directory is `/` (system root directory).
 
 ### 3. LSF Jobs

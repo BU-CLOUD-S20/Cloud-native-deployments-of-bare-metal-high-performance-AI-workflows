@@ -1,6 +1,6 @@
 Authors
 ============================
-The goal of our project was to display to the world (and namely, researchers) how to transition a workflow from a bare-metal environment (like an HPC) to the cloud. In our instance we are using the Mass Open Cloud. 
+The goal of our project was to display to the world (and namely, researchers) how to transition a workflow from a bare-metal environment (like an HPC) to the cloud. In our instance we are using the Mass Open Cloud. We transitioned "BigGAN" a generative adversarial network.
 
 Developers
 ---------------------------------------
@@ -12,7 +12,7 @@ These are the authors of the project who have contributed primarily to the devel
 
 * **[Jin.Qin](https://github.com/jin-qin)**
 
-* **[Hao Zuo]https://github.com/CarlZuo)**
+* **[Hao Zuo](https://github.com/CarlZuo)**
 
 * **[Shubham Arora](https://github.com/arorashu)**
 
